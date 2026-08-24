@@ -1,0 +1,2691 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدعم الصيدلي - د. أحمد المصري | صيدليات Capital Care</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Cairo for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f4f8f7;
+            color: #1e293b;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0d5c56 0%, #17a2b8 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(23, 162, 184, 0.2);
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        /* Springy, premium hover transition for navigation cards */
+        .nav-card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .nav-card-hover:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 15px 30px -10px rgba(13, 92, 86, 0.15);
+            border-color: #0d5c56;
+        }
+
+        #protection-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #protection-section .post-op-card {
+            border-top: 4px solid #2dd4bf;
+            background: rgba(255, 255, 255, 0.12);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #protection-section .post-op-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.18);
+            box-shadow: 0 18px 32px rgba(0, 0, 0, 0.14);
+        }
+
+        #protection-section .post-op-card .dose-list {
+            border-top: 1px solid rgba(204, 251, 241, 0.2);
+            padding-top: 1rem;
+        }
+
+        #protection-section .post-op-card .dose-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        #protection-section .post-op-card .dose-list li::before {
+            content: '\2713';
+            color: #5eead4;
+            font-weight: 900;
+        }
+
+        #protection-section .medicine-image-slot {
+            min-height: 96px;
+            border: 1px dashed rgba(204, 251, 241, 0.35);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #99f6e4;
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 1rem;
+        }
+
+        #protection-section .medicine-image-slot img {
+            max-height: 88px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        #vitamins-section .vitamin-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #vitamins-section .vitamin-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 28px rgba(13, 92, 86, 0.12);
+        }
+
+        #vitamins-section .medicine-image-slot {
+            min-height: 130px;
+            border: 1px dashed #99d8d0;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0d9488;
+            background: #f0fdfa;
+            margin-bottom: 1rem;
+        }
+
+        #vitamins-section .medicine-image-slot img {
+            max-height: 120px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .card-image-slot {
+            min-height: 104px;
+            margin-bottom: 1rem;
+            border: 1px dashed #b7dcd7;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0d9488;
+            background: rgba(240, 253, 250, 0.72);
+        }
+
+        .card-image-slot img {
+            max-width: 100%;
+            max-height: 96px;
+            object-fit: contain;
+        }
+
+        #practical-start-section {
+            background: linear-gradient(180deg, #f8fbfb 0%, #ffffff 100%);
+        }
+
+        #practical-start-section .start-guide {
+            border: 1px solid #cce8e4;
+            box-shadow: 0 14px 35px rgba(13, 92, 86, 0.08);
+        }
+
+        #practical-start-section .start-alert {
+            border-right: 4px solid #0d9488;
+            background: #ecfdf5;
+        }
+
+        #practical-start-section .start-step {
+            position: relative;
+            border: 1px solid #d9efec;
+            background: #f8ffff;
+        }
+
+        #practical-start-section .start-step-number {
+            width: 2rem;
+            height: 2rem;
+            flex: 0 0 2rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            background: #0d9488;
+            font-weight: 900;
+        }
+
+        #practical-start-section .start-day-card {
+            border: 1px solid #cce8e4;
+            background: #ffffff;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        #practical-start-section .start-day-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(13, 92, 86, 0.1);
+        }
+
+        #practical-start-section .start-question {
+            border: 1px solid #d9efec;
+            background: #ffffff;
+        }
+
+        #navigation-cards-section {
+            position: sticky;
+            top: var(--header-height, 68px);
+        }
+
+        @keyframes page-enter {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes card-enter {
+            from {
+                opacity: 0;
+                transform: translateY(18px) scale(0.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes nav-enter {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes body-enter {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        body {
+            animation: body-enter 0.55s ease-out both;
+        }
+
+        #home-content .grid>* {
+            animation: card-enter 0.55s ease-out both;
+        }
+
+        #home-content .grid>*:nth-child(2) {
+            animation-delay: 0.08s;
+        }
+
+        #home-content .grid>*:nth-child(3) {
+            animation-delay: 0.16s;
+        }
+
+        #home-content .grid>*:nth-child(4) {
+            animation-delay: 0.24s;
+        }
+
+        .faq-home-card {
+            background: conic-gradient(from 210deg, #0d9488 0 25%, #0f766e 25% 50%, #0284c7 50% 75%, #f59e0b 75% 100%);
+            border: 0;
+            box-shadow: 0 18px 36px rgba(13, 92, 86, 0.2);
+        }
+
+        .faq-home-card::after {
+            content: '';
+            position: absolute;
+            inset: 7px;
+            border: 1px dashed rgba(255, 255, 255, 0.55);
+            border-radius: 999px;
+            pointer-events: none;
+        }
+
+        .faq-home-card .faq-card-content {
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.78);
+            padding: 2rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 1024px) {
+            #home-content .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            #home-content .faq-home-card {
+                grid-column: span 2;
+                justify-self: center;
+                width: min(100%, 300px);
+                aspect-ratio: 1;
+                border-radius: 999px;
+                padding: 0.5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #home-content .faq-home-card {
+                grid-column: span 2;
+            }
+        }
+
+        .home-hero-section {
+            position: relative;
+            isolation: isolate;
+            background: linear-gradient(180deg, #f0fbf9 0%, #f8fafc 72%, #f8fafc 100%);
+        }
+
+        .home-hero-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.45;
+            background-image: linear-gradient(135deg, rgba(13, 148, 136, 0.08) 1px, transparent 1px),
+                linear-gradient(45deg, rgba(245, 158, 11, 0.06) 1px, transparent 1px);
+            background-size: 30px 30px, 44px 44px;
+            mask-image: linear-gradient(to bottom, black, transparent 86%);
+        }
+
+        .home-hero-section .home-kicker {
+            box-shadow: 0 8px 24px rgba(13, 148, 136, 0.12);
+            animation: soft-float 3.5s ease-in-out infinite;
+        }
+
+        .home-hero-section h1 {
+            text-shadow: 0 8px 24px rgba(15, 118, 110, 0.1);
+        }
+
+        .home-hero-section h1::after {
+            content: '';
+            display: block;
+            width: 72px;
+            height: 4px;
+            margin: 14px auto 0;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #0d9488, #f59e0b);
+        }
+
+        .home-hero-section .home-card {
+            border-top: 3px solid var(--card-accent, #0d9488);
+            box-shadow: 0 12px 30px rgba(15, 118, 110, 0.07);
+        }
+
+        .home-hero-section .home-card:hover {
+            box-shadow: 0 22px 42px rgba(15, 118, 110, 0.16);
+        }
+
+        .home-hero-section .home-card-icon {
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .home-hero-section .home-card:hover .home-card-icon {
+            transform: rotate(-8deg) scale(1.12);
+        }
+
+        @keyframes soft-float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        #navigation-cards-section:not(.hidden) {
+            animation: nav-enter 0.35s ease-out both;
+        }
+
+        .section-enter {
+            animation: page-enter 0.45s ease-out both;
+        }
+
+        button,
+        a,
+        [onclick] {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button:active,
+        a:active,
+        [onclick]:active {
+            transform: scale(0.98);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Theme 02: Royal blue, coral, and mint wellness direction. */
+        body.theme-v2 {
+            background-color: #f5f8fc;
+            color: #172033;
+        }
+
+        .theme-v2 .bg-slate-50 {
+            background-color: #f5f8fc;
+        }
+
+        .theme-v2 .bg-white {
+            background-color: #ffffff;
+        }
+
+        .theme-v2 .text-slate-800 {
+            color: #172033;
+        }
+
+        .theme-v2 .text-slate-600 {
+            color: #526176;
+        }
+
+        .theme-v2 .text-slate-500 {
+            color: #718096;
+        }
+
+        .theme-v2 .bg-teal-700,
+        .theme-v2 .bg-teal-900 {
+            background-color: #173f8a;
+        }
+
+        .theme-v2 .bg-teal-600 {
+            background-color: #2458b8;
+        }
+
+        .theme-v2 .bg-teal-500 {
+            background-color: #3a73d1;
+        }
+
+        .theme-v2 .bg-teal-50 {
+            background-color: #eaf2ff;
+        }
+
+        .theme-v2 .text-teal-800,
+        .theme-v2 .text-teal-700,
+        .theme-v2 .text-teal-600 {
+            color: #2458b8;
+        }
+
+        .theme-v2 .text-teal-500,
+        .theme-v2 .text-teal-400,
+        .theme-v2 .text-teal-300,
+        .theme-v2 .text-teal-200,
+        .theme-v2 .text-teal-100 {
+            color: #b9d1ff;
+        }
+
+        .theme-v2 .border-teal-100,
+        .theme-v2 .border-teal-200 {
+            border-color: #c9dcff;
+        }
+
+        .theme-v2 .bg-emerald-600 {
+            background-color: #0f9f87;
+        }
+
+        .theme-v2 .bg-emerald-700 {
+            background-color: #087c6a;
+        }
+
+        .theme-v2 .bg-emerald-50 {
+            background-color: #e5f8f3;
+        }
+
+        .theme-v2 .text-emerald-800,
+        .theme-v2 .text-emerald-600 {
+            color: #087c6a;
+        }
+
+        .theme-v2 .bg-sky-50 {
+            background-color: #e8f6ff;
+        }
+
+        .theme-v2 .text-sky-600 {
+            color: #087da8;
+        }
+
+        .theme-v2 .bg-amber-50 {
+            background-color: #fff1ec;
+        }
+
+        .theme-v2 .bg-amber-500 {
+            background-color: #f26b5e;
+        }
+
+        .theme-v2 .from-teal-600,
+        .theme-v2 .from-emerald-600 {
+            --tw-gradient-from: #2458b8 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(36 88 184 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v2 .to-teal-800,
+        .theme-v2 .to-teal-700 {
+            --tw-gradient-to: #173f8a var(--tw-gradient-to-position);
+        }
+
+        .theme-v2 .to-emerald-600,
+        .theme-v2 .to-teal-700 {
+            --tw-gradient-to: #0f9f87 var(--tw-gradient-to-position);
+        }
+
+        .theme-v2 .from-sky-600 {
+            --tw-gradient-from: #087da8 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(8 125 168 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v2 .to-blue-700 {
+            --tw-gradient-to: #2458b8 var(--tw-gradient-to-position);
+        }
+
+        .theme-v2 .from-emerald-600.to-teal-700 {
+            --tw-gradient-from: #0f9f87 var(--tw-gradient-from-position);
+            --tw-gradient-to: #087c6a var(--tw-gradient-to-position);
+        }
+
+        .theme-v2 .from-emerald-600.to-teal-700 {
+            --tw-gradient-stops: var(--tw-gradient-from), #12b89d var(--tw-gradient-via-position), var(--tw-gradient-to);
+        }
+
+        .theme-v2 .text-amber-600,
+        .theme-v2 .text-amber-700 {
+            color: #d94f45;
+        }
+
+        .theme-v2 .border-amber-200 {
+            border-color: #ffc9c2;
+        }
+
+        .theme-v2 .home-hero-section {
+            background: linear-gradient(180deg, #eef5ff 0%, #f7fbff 72%, #f5f8fc 100%);
+        }
+
+        .theme-v2 .home-hero-section::before {
+            opacity: 0.55;
+            background-image: linear-gradient(135deg, rgba(37, 88, 184, 0.08) 1px, transparent 1px),
+                linear-gradient(45deg, rgba(242, 107, 94, 0.08) 1px, transparent 1px);
+        }
+
+        .theme-v2 .home-hero-section h1::after {
+            background: linear-gradient(90deg, #2458b8, #f26b5e);
+        }
+
+        .theme-v2 .home-hero-section .home-card {
+            --card-accent: #2458b8 !important;
+            box-shadow: 0 14px 30px rgba(23, 63, 138, 0.08);
+        }
+
+        .theme-v2 .home-hero-section .home-card:nth-child(2) {
+            --card-accent: #0f9f87 !important;
+        }
+
+        .theme-v2 .home-hero-section .home-card:nth-child(3) {
+            --card-accent: #087da8 !important;
+        }
+
+        .theme-v2 .home-hero-section .home-card:nth-child(4) {
+            --card-accent: #f26b5e !important;
+        }
+
+        .theme-v2 .home-hero-section .home-card:hover {
+            box-shadow: 0 24px 44px rgba(23, 63, 138, 0.16);
+        }
+
+        @keyframes v2-page-enter {
+            from {
+                opacity: 0;
+                filter: blur(3px);
+            }
+
+            to {
+                opacity: 1;
+                filter: blur(0);
+            }
+        }
+
+        @keyframes v2-card-enter {
+            from {
+                opacity: 0;
+                transform: translateY(24px) rotate(1deg);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        @keyframes v2-nav-enter {
+            from {
+                opacity: 0;
+                transform: translateY(-14px) scale(0.98);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .theme-v2 {
+            animation: v2-page-enter 0.65s ease-out both;
+        }
+
+        .theme-v2 #home-content .grid>* {
+            animation-name: v2-card-enter;
+        }
+
+        .theme-v2 #navigation-cards-section:not(.hidden),
+        .theme-v2 #navigation-cards-section.nav-enter {
+            animation-name: v2-nav-enter;
+        }
+
+        .theme-v2 #cta-section {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background: #173f8a;
+            text-align: right;
+        }
+
+        .theme-v2 #cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.22;
+            background-image: linear-gradient(135deg, transparent 0 48%, rgba(255, 255, 255, 0.12) 48% 49%, transparent 49% 100%),
+                linear-gradient(45deg, transparent 0 48%, rgba(242, 107, 94, 0.22) 48% 49%, transparent 49% 100%);
+            background-size: 46px 46px, 72px 72px;
+        }
+
+        .theme-v2 #cta-section>div {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+            align-items: center;
+            column-gap: 4rem;
+            row-gap: 1rem;
+            text-align: right;
+        }
+
+        .theme-v2 #cta-section>div>span,
+        .theme-v2 #cta-section>div>h2,
+        .theme-v2 #cta-section>div>p:last-child {
+            grid-column: 1;
+        }
+
+        .theme-v2 #cta-section>div>span {
+            justify-self: start;
+            color: #d7e5ff;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .theme-v2 #cta-section>div>h2 {
+            max-width: 560px;
+            font-size: clamp(1.65rem, 3vw, 2.35rem);
+            line-height: 1.35;
+        }
+
+        .theme-v2 #cta-section>div>p:first-of-type {
+            grid-column: 1;
+            color: #c9dcff;
+            line-height: 1.9;
+        }
+
+        .theme-v2 #cta-section>div>div {
+            grid-column: 2;
+            grid-row: 1 / span 4;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            width: 100%;
+            padding: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            border-radius: 1.25rem;
+            background: rgba(8, 35, 91, 0.3);
+        }
+
+        .theme-v2 #cta-section>div>div a {
+            width: 100%;
+            justify-content: center;
+            min-height: 58px;
+            border-radius: 0.9rem;
+            box-shadow: none;
+        }
+
+        .theme-v2 #cta-section>div>div a:last-child {
+            background: #f26b5e;
+            border-color: #f26b5e;
+        }
+
+        .theme-v2 #cta-section>div>p:last-child {
+            color: #a9c5f7;
+            justify-self: start;
+        }
+
+        @media (max-width: 767px) {
+            .theme-v2 #cta-section>div {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .theme-v2 #cta-section>div>span,
+            .theme-v2 #cta-section>div>p:last-child {
+                align-self: center;
+            }
+
+            .theme-v2 #cta-section>div>h2 {
+                max-width: none;
+            }
+
+            .theme-v2 #cta-section>div>div {
+                padding: 0.75rem;
+            }
+        }
+
+        /* Theme 03: Editorial wellness with ink, lime, and coral accents. */
+        body.theme-v3 {
+            background-color: #f5f6ef;
+            color: #121820;
+        }
+
+        .theme-v3 .bg-slate-50,
+        .theme-v3 .bg-white {
+            background-color: #f5f6ef;
+        }
+
+        .theme-v3 .text-slate-800 {
+            color: #121820;
+        }
+
+        .theme-v3 .text-slate-600,
+        .theme-v3 .text-slate-500 {
+            color: #596269;
+        }
+
+        .theme-v3 .bg-teal-900,
+        .theme-v3 .bg-teal-700 {
+            background-color: #121820;
+        }
+
+        .theme-v3 .bg-teal-600 {
+            background-color: #25323b;
+        }
+
+        .theme-v3 .bg-teal-500 {
+            background-color: #c9eb45;
+        }
+
+        .theme-v3 .bg-teal-50,
+        .theme-v3 .bg-emerald-50,
+        .theme-v3 .bg-sky-50 {
+            background-color: #edf7b9;
+        }
+
+        .theme-v3 .text-teal-800,
+        .theme-v3 .text-teal-700,
+        .theme-v3 .text-teal-600,
+        .theme-v3 .text-emerald-800,
+        .theme-v3 .text-emerald-600,
+        .theme-v3 .text-sky-600 {
+            color: #25323b;
+        }
+
+        .theme-v3 .text-teal-500,
+        .theme-v3 .text-teal-400,
+        .theme-v3 .text-teal-300,
+        .theme-v3 .text-teal-200,
+        .theme-v3 .text-teal-100 {
+            color: #dff37c;
+        }
+
+        .theme-v3 .border-teal-100,
+        .theme-v3 .border-teal-200,
+        .theme-v3 .border-slate-100,
+        .theme-v3 .border-slate-200 {
+            border-color: #d9ded3;
+        }
+
+        .theme-v3 .bg-emerald-600 {
+            background-color: #25323b;
+        }
+
+        .theme-v3 .bg-emerald-700 {
+            background-color: #121820;
+        }
+
+        .theme-v3 .bg-amber-50 {
+            background-color: #fff0e8;
+        }
+
+        .theme-v3 .bg-amber-500 {
+            background-color: #f47c62;
+        }
+
+        .theme-v3 .text-amber-600,
+        .theme-v3 .text-amber-700 {
+            color: #d9573d;
+        }
+
+        .theme-v3 .border-amber-200 {
+            border-color: #ffc7b8;
+        }
+
+        .theme-v3 header {
+            background-color: #f5f6ef;
+            border-bottom: 2px solid #121820;
+            box-shadow: none;
+        }
+
+        .theme-v3 header .bg-teal-700 {
+            color: #121820;
+            background-color: #c9eb45;
+            box-shadow: 4px 4px 0 #121820;
+        }
+
+        .theme-v3 .home-hero-section {
+            background: #f5f6ef;
+            padding-top: 5.5rem;
+            padding-bottom: 6rem;
+        }
+
+        .theme-v3 .home-hero-section::before {
+            opacity: 0.75;
+            background-image: linear-gradient(90deg, rgba(18, 24, 32, 0.08) 1px, transparent 1px),
+                linear-gradient(rgba(18, 24, 32, 0.08) 1px, transparent 1px);
+            background-size: 42px 42px;
+            mask-image: linear-gradient(to bottom, black, transparent 72%);
+        }
+
+        .theme-v3 .home-hero-section .home-kicker {
+            color: #121820;
+            background-color: #c9eb45;
+            border-color: #121820;
+            border-radius: 0.5rem;
+            box-shadow: 4px 4px 0 #121820;
+            animation: v3-kicker 4s steps(2, end) infinite;
+        }
+
+        .theme-v3 .home-hero-section h1 {
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: clamp(2.25rem, 6vw, 4.5rem);
+            letter-spacing: -0.04em;
+            line-height: 1.15;
+        }
+
+        .theme-v3 .home-hero-section h1::after {
+            width: 120px;
+            height: 8px;
+            margin-top: 1.25rem;
+            border-radius: 0;
+            background: #f47c62;
+        }
+
+        .theme-v3 .home-hero-section .home-card {
+            --card-accent: #c9eb45 !important;
+            background-color: #ffffff;
+            border: 2px solid #121820;
+            border-top: 10px solid var(--card-accent, #c9eb45);
+            border-radius: 0.75rem;
+            box-shadow: 7px 7px 0 #121820;
+            transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
+        }
+
+        .theme-v3 .home-hero-section .home-card:nth-child(2) {
+            --card-accent: #4ed8c2 !important;
+            transform: rotate(1.2deg);
+        }
+
+        .theme-v3 .home-hero-section .home-card:nth-child(3) {
+            --card-accent: #f47c62 !important;
+            transform: rotate(-1deg);
+        }
+
+        .theme-v3 .home-hero-section .home-card:nth-child(4) {
+            --card-accent: #c9eb45 !important;
+            transform: rotate(1.8deg);
+        }
+
+        .theme-v3 .home-hero-section .home-card:hover {
+            transform: translate(-4px, -8px) rotate(0deg);
+            box-shadow: 11px 13px 0 #121820;
+        }
+
+        .theme-v3 .home-hero-section .home-card:hover .home-card-icon {
+            transform: rotate(10deg) scale(1.12);
+        }
+
+        .theme-v3 #navigation-cards-section {
+            background-color: #f5f6ef;
+            border-bottom: 2px solid #121820;
+            box-shadow: none;
+        }
+
+        .theme-v3 #navigation-cards-section:not(.hidden),
+        .theme-v3 #navigation-cards-section.nav-enter {
+            animation: v3-nav-enter 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+
+        .theme-v3 #navigation-cards-section .nav-header-card {
+            border-radius: 0.5rem;
+            border-width: 2px;
+            box-shadow: 3px 3px 0 #121820;
+        }
+
+        .theme-v3 #cta-section {
+            background: #c9eb45;
+            color: #121820;
+            border-top: 2px solid #121820;
+            border-bottom: 2px solid #121820;
+        }
+
+        .theme-v3 #cta-section::before {
+            opacity: 0.3;
+            background-image: linear-gradient(135deg, transparent 0 48%, rgba(18, 24, 32, 0.22) 48% 49%, transparent 49% 100%);
+        }
+
+        .theme-v3 #cta-section>div {
+            text-align: right;
+        }
+
+        .theme-v3 #cta-section>div>span {
+            color: #c9eb45;
+            background: #121820;
+            border-color: #121820;
+            border-radius: 0.5rem;
+        }
+
+        .theme-v3 #cta-section>div>h2 {
+            color: #121820;
+        }
+
+        .theme-v3 #cta-section>div>p:first-of-type,
+        .theme-v3 #cta-section>div>p:last-child {
+            color: #25323b;
+        }
+
+        .theme-v3 #cta-section>div>div {
+            background: #121820;
+            border-color: #121820;
+            border-radius: 0.75rem;
+            box-shadow: 7px 7px 0 #f47c62;
+        }
+
+        .theme-v3 #cta-section>div>div a:last-child {
+            background: #f47c62;
+            color: #121820;
+            border-color: #121820;
+        }
+
+        @keyframes v3-kicker {
+
+            0%,
+            85%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            88% {
+                transform: translate(3px, -2px);
+            }
+
+            92% {
+                transform: translate(-2px, 2px);
+            }
+        }
+
+        @keyframes v3-nav-enter {
+            from {
+                opacity: 0;
+                clip-path: inset(0 0 100% 0);
+            }
+
+            to {
+                opacity: 1;
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+        .theme-v3 {
+            animation: v3-page-enter 0.6s ease-out both;
+        }
+
+        .theme-v3 #home-content .grid>* {
+            animation-name: v3-card-enter;
+        }
+
+        @keyframes v3-page-enter {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes v3-card-enter {
+            from {
+                opacity: 0;
+                clip-path: inset(0 0 100% 0);
+            }
+
+            to {
+                opacity: 1;
+                clip-path: inset(0 0 0 0);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .theme-v3 .home-hero-section .home-card:nth-child(n) {
+                transform: none;
+            }
+
+            .theme-v3 .home-hero-section .home-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .theme-v3 #cta-section>div {
+                text-align: center;
+            }
+        }
+
+        /* Theme 03 palette refinement: green and blue only. */
+        .theme-v3 .bg-teal-500,
+        .theme-v3 .bg-amber-500,
+        .theme-v3 .home-hero-section h1::after {
+            background-color: #20b486;
+            background-image: none;
+        }
+
+        .theme-v3 .from-amber-500,
+        .theme-v3 .from-orange-600 {
+            --tw-gradient-from: #20b486 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(32 180 134 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v3 .to-orange-600 {
+            --tw-gradient-to: #123b5d var(--tw-gradient-to-position);
+        }
+
+        .theme-v3 .bg-teal-50,
+        .theme-v3 .bg-emerald-50,
+        .theme-v3 .bg-sky-50,
+        .theme-v3 .bg-amber-50 {
+            background-color: #e3f3fa;
+        }
+
+        .theme-v3 .home-hero-section .home-kicker,
+        .theme-v3 header .bg-teal-700 {
+            color: #123b5d;
+            background-color: #20b486;
+            border-color: #123b5d;
+            box-shadow: 4px 4px 0 #123b5d;
+        }
+
+        .theme-v3 .text-amber-600,
+        .theme-v3 .text-amber-700,
+        .theme-v3 .text-red-500,
+        .theme-v3 .text-red-700 {
+            color: #16805f;
+        }
+
+        .theme-v3 .border-amber-200 {
+            border-color: #a9d8ea;
+        }
+
+        .theme-v3 .home-hero-section .home-card {
+            --card-accent: #20b486 !important;
+            border-top-color: var(--card-accent) !important;
+            border-color: #123b5d;
+            box-shadow: 7px 7px 0 #123b5d;
+        }
+
+        .theme-v3 .home-hero-section .home-card:nth-child(2),
+        .theme-v3 .home-hero-section .home-card:nth-child(3),
+        .theme-v3 .home-hero-section .home-card:nth-child(4) {
+            --card-accent: #20b486 !important;
+        }
+
+        .theme-v3 .home-hero-section .home-card:hover {
+            box-shadow: 11px 13px 0 #123b5d;
+        }
+
+        .theme-v3 #navigation-cards-section .nav-header-card,
+        .theme-v3 #cta-section {
+            border-color: #123b5d;
+        }
+
+        .theme-v3 #navigation-cards-section .nav-header-card {
+            box-shadow: 3px 3px 0 #123b5d;
+        }
+
+        .theme-v3 #cta-section,
+        .theme-v3 #cta-section>div>div a:last-child {
+            background-color: #20b486;
+        }
+
+        .theme-v3 #cta-section>div>span {
+            color: #20b486;
+            background-color: #123b5d;
+            border-color: #123b5d;
+        }
+
+        .theme-v3 #cta-section>div>div {
+            background-color: #123b5d;
+            border-color: #123b5d;
+            box-shadow: 7px 7px 0 #20b486;
+        }
+
+        .theme-v3 #cta-section>div>div a:last-child {
+            color: #123b5d;
+            border-color: #123b5d;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 min-h-screen">
+
+    <!-- Login gate: covers the page until a valid username/password from users.json is entered -->
+    <div id="login-gate"
+        class="fixed inset-0 z-[9999] bg-slate-900/95 backdrop-blur-sm flex items-center justify-center p-4">
+        <form id="login-form"
+            class="bg-white w-full max-w-sm rounded-2xl shadow-2xl p-8 text-center"
+            autocomplete="off">
+            <div class="bg-teal-700 text-white w-14 h-14 mx-auto rounded-xl flex items-center justify-center text-2xl mb-4">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <h1 class="text-lg font-black text-slate-800 mb-1">تسجيل الدخول</h1>
+            <p class="text-sm text-slate-500 mb-6">الرجاء إدخال بيانات الدخول للمتابعة</p>
+            <input id="login-username" type="text" placeholder="اسم المستخدم" required
+                class="w-full mb-3 px-4 py-2.5 rounded-xl border border-slate-200 text-right focus:outline-none focus:ring-2 focus:ring-teal-600">
+            <input id="login-password" type="password" placeholder="كلمة المرور" required
+                class="w-full mb-3 px-4 py-2.5 rounded-xl border border-slate-200 text-right focus:outline-none focus:ring-2 focus:ring-teal-600">
+            <p id="login-error" class="hidden text-red-600 text-xs font-bold mb-3">اسم المستخدم أو كلمة المرور غير صحيحة</p>
+            <button type="submit"
+                class="w-full bg-teal-700 hover:bg-teal-800 text-white font-bold py-2.5 rounded-xl transition">
+                دخول
+            </button>
+        </form>
+    </div>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div
+                    class="bg-teal-700 text-white p-2 rounded-xl flex items-center justify-center font-bold text-xl shadow">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                    <span class="text-xs text-teal-800 font-bold block tracking-wider">صيدليات</span>
+                    <span class="text-lg font-black text-slate-800">Capital Care</span>
+                </div>
+            </div>
+            <div
+                class="hidden md:flex items-center gap-2 text-sm text-teal-800 bg-teal-50 px-4 py-2 rounded-full font-semibold border border-teal-100">
+                <i class="fa-solid fa-user-doctor"></i>
+                <span>الدعم الصيدلي: د. أحمد المصري</span>
+            </div>
+            <div class="relative">
+                <button id="header-whatsapp-btn"
+                    class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl text-sm font-bold flex items-center gap-2 shadow transition focus:outline-none">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>تواصل واتساب</span>
+                    <i class="fa-solid fa-chevron-down text-xs mr-1"></i>
+                </button>
+                <div id="header-whatsapp-dropdown"
+                    class="hidden absolute left-0 mt-2 w-72 bg-white rounded-2xl shadow-xl border border-slate-100 py-3 z-50 transition-all duration-200 origin-top-left transform scale-95 opacity-0">
+                    <div class="px-4 py-1.5 border-b border-slate-100 text-right">
+                        <p class="text-[11px] text-slate-400 font-bold">اختر القسم للتواصل المباشر</p>
+                    </div>
+                    <a href="https://wa.me/201222750363?text=أود الاستشارة الطبية والدعم الصيدلي" target="_blank"
+                        class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition">
+                        <div
+                            class="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div class="text-right flex-1">
+                            <span class="block text-sm font-bold text-slate-800">الاستشارات والدعم الصيدلي</span>
+                            <span class="block text-xs text-slate-500">د. أحمد المصري</span>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/201222750363?text=أود طلب الأدوية ومكملات التعافي" target="_blank"
+                        class="flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition border-t border-slate-50">
+                        <div
+                            class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="text-right flex-1">
+                            <span class="block text-sm font-bold text-slate-800">طلب وتوصيل الأدوية</span>
+                            <span class="block text-xs text-slate-500 font-medium">صيدليات كابيتال كير</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="navigation-cards-section" class="hidden bg-white shadow-md border-b border-slate-100 z-40 sticky">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3">
+            <div class="grid grid-cols-6 gap-2 sm:gap-3">
+
+                <div onclick="switchTab('home')" id="nav-card-home"
+                    class="nav-header-card bg-teal-700 text-white rounded-xl p-2.5 sm:p-3 flex flex-col items-center gap-1.5 cursor-pointer transition-all duration-300 shadow-sm">
+                    <i class="fa-solid fa-house text-base sm:text-lg"></i>
+                    <span class="text-[10px] sm:text-xs font-bold text-center leading-tight">الرئيسية</span>
+                </div>
+
+                <div onclick="switchTab('prescription-practical')" id="nav-card-prescription-practical"
+                    class="nav-header-card bg-white text-slate-600 border border-slate-200 hover:border-teal-400 hover:text-teal-700 rounded-xl p-2.5 sm:p-3 flex flex-col items-center gap-1.5 cursor-pointer transition-all duration-300">
+                    <i class="fa-solid fa-kit-medical text-base sm:text-lg"></i>
+                    <span class="text-[10px] sm:text-xs font-semibold text-center leading-tight">الروشتة العملية</span>
+                </div>
+
+                <div onclick="switchTab('prescription-followup')" id="nav-card-prescription-followup"
+                    class="nav-header-card bg-white text-slate-600 border border-slate-200 hover:border-teal-400 hover:text-teal-700 rounded-xl p-2.5 sm:p-3 flex flex-col items-center gap-1.5 cursor-pointer transition-all duration-300">
+                    <i class="fa-solid fa-rotate-right text-base sm:text-lg"></i>
+                    <span class="text-[10px] sm:text-xs font-semibold text-center leading-tight">روشتة المتابعة</span>
+                </div>
+
+                <div onclick="switchTab('services')" id="nav-card-services"
+                    class="nav-header-card bg-white text-slate-600 border border-slate-200 hover:border-teal-400 hover:text-teal-700 rounded-xl p-2.5 sm:p-3 flex flex-col items-center gap-1.5 cursor-pointer transition-all duration-300">
+                    <i class="fa-solid fa-hand-holding-medical text-base sm:text-lg"></i>
+                    <span class="text-[10px] sm:text-xs font-semibold text-center leading-tight">الخدمات</span>
+                </div>
+
+                <div onclick="switchTab('faq')" id="nav-card-faq"
+                    class="nav-header-card bg-white text-slate-600 border border-slate-200 hover:border-teal-400 hover:text-teal-700 rounded-xl p-2.5 sm:p-3 flex flex-col items-center gap-1.5 cursor-pointer transition-all duration-300">
+                    <i class="fa-solid fa-circle-question text-base sm:text-lg"></i>
+                    <span class="text-[10px] sm:text-xs font-semibold text-center leading-tight">الأسئلة الشائعة</span>
+                </div>
+
+                <a href="https://wa.me/0201063716011?text=متواجدون دائما لدعمك في رحلة التعافي" target="_blank"
+                    id="nav-card-complaints"
+                    class="nav-header-card bg-white text-amber-600 border border-amber-200 hover:border-amber-400 hover:bg-amber-50 rounded-xl p-2.5 sm:p-3 flex flex-col items-center gap-1.5 cursor-pointer transition-all duration-300">
+                    <i class="fa-solid fa-comment-medical text-base sm:text-lg"></i>
+                    <span class="text-[10px] sm:text-xs font-semibold text-center leading-tight">الشكاوي</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <!-- <section id="hero-section" class="hero-gradient text-white py-12 md:py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-8 items-center">
+            <div class="text-right space-y-6">
+                <span class="bg-white/20 text-white text-xs px-3 py-1.5 rounded-full font-bold uppercase tracking-wider backdrop-blur-sm">
+                    دليل رحلة التعافي والبروتوكول العلاجي
+                </span>
+                <h1 class="text-3xl md:text-5xl font-black leading-tight">
+                    حمد لله على السلامة ❤️
+                </h1>
+                <p class="text-lg md:text-xl text-teal-100 leading-relaxed font-medium">
+                    هذا الملف يحتوي على شرح تفصيلي ومبسط لكل الأدوية والفيتامينات التي يحتاجها جسمك في هذه المرحلة. تم تنظيم الأدوية لضمان أفضل حماية وأسرع تعافي.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="javascript:void(0)" onclick="switchTab('prescription-practical'); setTimeout(() => { document.getElementById('pillars').scrollIntoView({ behavior: 'smooth' }); }, 300);" class="bg-white text-teal-800 font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-teal-50 transition">
+                        استعراض الركائز الأربع
+                    </a>
+                    <a href="javascript:void(0)" onclick="switchTab('prescription-practical'); setTimeout(() => { document.getElementById('protection-section').scrollIntoView({ behavior: 'smooth' }); }, 300);" class="bg-teal-900/40 border border-white/30 text-white font-bold px-6 py-3 rounded-xl hover:bg-teal-900/60 transition">
+                        الجدول اليومي والأدوية
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="bg-white/10 p-4 rounded-3xl backdrop-blur-md border border-white/20 shadow-2xl max-w-sm w-full text-center">
+                    <div class="w-24 h-24 bg-white rounded-full mx-auto flex items-center justify-center text-teal-700 text-4xl shadow-inner mb-4">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">بروتوكول التعافي الآمن</h3>
+                    <p class="text-sm text-teal-100 mt-2">إشراف صيدلي دقيق ومتابعة مستمرة لراحتك وصحتك.</p>
+                    <div class="mt-6 border-t border-white/20 pt-4 flex justify-around text-xs">
+                        <div><strong class="block text-lg">100%</strong>منتجات أصلية</div>
+                        <div><strong class="block text-lg">24/7</strong>دعم واستشارة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- ===== HOME CONTENT ===== -->
+
+    <section id="home-content" class="home-hero-section py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-10 md:mb-14">
+            <div
+                class="home-kicker inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 text-xs font-bold px-4 py-2 rounded-full mb-4">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <span>دليل رحلة التعافي والبروتوكول العلاجي</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-black text-slate-800 leading-tight">حمد لله على السلامة ❤️</h1>
+            <p class="text-slate-500 text-sm md:text-base mt-3 max-w-lg mx-auto leading-relaxed">اختر القسم الذي تريد
+                معرفته</p>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+
+            <!-- Card 1: Practical Prescription -->
+            <div onclick="switchTab('prescription-practical')"
+                class="home-card group relative bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden p-6 md:p-8 flex flex-col"
+                style="--card-accent: #0d9488">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-teal-600 to-teal-800 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div
+                        class="home-card-icon w-12 h-12 md:w-14 md:h-14 bg-teal-50 group-hover:bg-white/20 text-teal-600 group-hover:text-white rounded-2xl flex items-center justify-center text-xl md:text-2xl mb-5 transition-all duration-500">
+                        <i class="fa-solid fa-kit-medical"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="text-base md:text-lg font-black text-slate-800 group-hover:text-white transition-colors duration-500">
+                            الروشتة العملية</h3>
+                        <p
+                            class="text-xs md:text-sm text-slate-500 group-hover:text-teal-100 mt-2 leading-relaxed transition-colors duration-500">
+                            أدوية الحماية والوقاية وسيولة الدم بعد العملية</p>
+                    </div>
+                    <div
+                        class="mt-5 flex items-center justify-end gap-2 text-teal-600 group-hover:text-white text-xs font-bold transition-colors duration-500">
+                        <span>عرض</span>
+                        <div
+                            class="w-6 h-6 bg-teal-50 group-hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-500">
+                            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Follow-up Prescription -->
+            <div onclick="switchTab('prescription-followup')"
+                class="home-card group relative bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden p-6 md:p-8 flex flex-col"
+                style="--card-accent: #10b981">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-emerald-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div
+                        class="home-card-icon w-12 h-12 md:w-14 md:h-14 bg-emerald-50 group-hover:bg-white/20 text-emerald-600 group-hover:text-white rounded-2xl flex items-center justify-center text-xl md:text-2xl mb-5 transition-all duration-500">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="text-base md:text-lg font-black text-slate-800 group-hover:text-white transition-colors duration-500">
+                            روشتة المتابعة</h3>
+                        <p
+                            class="text-xs md:text-sm text-slate-500 group-hover:text-emerald-100 mt-2 leading-relaxed transition-colors duration-500">
+                            الفيتامينات ومكملات التعافي طويل الأمد</p>
+                    </div>
+                    <div
+                        class="mt-5 flex items-center justify-end gap-2 text-emerald-600 group-hover:text-white text-xs font-bold transition-colors duration-500">
+                        <span>عرض</span>
+                        <div
+                            class="w-6 h-6 bg-emerald-50 group-hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-500">
+                            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Services -->
+            <div onclick="switchTab('services')"
+                class="home-card group relative bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden p-6 md:p-8 flex flex-col"
+                style="--card-accent: #0284c7">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-sky-600 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div
+                        class="home-card-icon w-12 h-12 md:w-14 md:h-14 bg-sky-50 group-hover:bg-white/20 text-sky-600 group-hover:text-white rounded-2xl flex items-center justify-center text-xl md:text-2xl mb-5 transition-all duration-500">
+                        <i class="fa-solid fa-hand-holding-medical"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="text-base md:text-lg font-black text-slate-800 group-hover:text-white transition-colors duration-500">
+                            خدماتنا</h3>
+                        <p
+                            class="text-xs md:text-sm text-slate-500 group-hover:text-sky-100 mt-2 leading-relaxed transition-colors duration-500">
+                            باقات التعافي والدعم الصيدلي المتكامل</p>
+                    </div>
+                    <div
+                        class="mt-5 flex items-center justify-end gap-2 text-sky-600 group-hover:text-white text-xs font-bold transition-colors duration-500">
+                        <span>عرض</span>
+                        <div
+                            class="w-6 h-6 bg-sky-50 group-hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-500">
+                            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Complaints -->
+            <a href="https://wa.me/201222750363?text=متواجدون  دائما لدعمك في رحلة التعافي " target="_blank"
+                class="home-card group relative bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500 cursor-pointer overflow-hidden p-6 md:p-8 flex flex-col"
+                style="--card-accent: #f59e0b">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-amber-500 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div class="relative z-10 flex flex-col h-full">
+                    <div
+                        class="home-card-icon w-12 h-12 md:w-14 md:h-14 bg-amber-50 group-hover:bg-white/20 text-amber-600 group-hover:text-white rounded-2xl flex items-center justify-center text-xl md:text-2xl mb-5 transition-all duration-500">
+                        <i class="fa-solid fa-comment-medical"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3
+                            class="text-base md:text-lg font-black text-slate-800 group-hover:text-white transition-colors duration-500">
+                            قيم تجربتك </h3>
+                        <p
+                            class="text-xs md:text-sm text-slate-500 group-hover:text-amber-100 mt-2 leading-relaxed transition-colors duration-500">
+                            شاركنا رأيك في تجربتك </p>
+                    </div>
+                    <div
+                        class="mt-5 flex items-center justify-end gap-2 text-amber-600 group-hover:text-white text-xs font-bold transition-colors duration-500">
+                        <span>عرض</span>
+                        <div
+                            class="w-6 h-6 bg-amber-50 group-hover:bg-white/20 rounded-lg flex items-center justify-center transition-all duration-500">
+                            <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!-- Card 5: Frequently Asked Questions -->
+            <div onclick="switchTab('faq')"
+                class="faq-home-card group relative cursor-pointer overflow-hidden p-6 md:p-8 flex flex-col">
+                <div class="faq-card-content relative z-10 flex flex-col h-full w-full justify-center">
+                    <div
+                        class="w-14 h-14 bg-white/20 text-white rounded-full flex items-center justify-center text-2xl mb-4 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
+                        <i class="fa-solid fa-circle-question"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-black text-white">الأسئلة الشائعة</h3>
+                    <p class="text-xs md:text-sm text-white/80 mt-2 leading-relaxed">إجابات سريعة على أهم أسئلتك بعد
+                        العملية</p>
+                    <div class="mt-5 flex items-center justify-center gap-2 text-white text-xs font-bold">
+                        <span>اعرف أكثر</span>
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ===== END HOME CONTENT ===== -->
+
+    <!-- 4 Pillars Section: Hidden from Home view, now activated in the Practical Prescription Tab -->
+
+    <!-- <section id="pillars" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+                class="text-teal-600 font-bold text-sm bg-teal-50 px-3 py-1 rounded-full border border-teal-200">الركائز
+                الأساسية</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">نظامك العلاجي يتكون من ٤ ركائز أساسية</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="text-xs text-teal-600 font-bold">الركيزة الأولى</span>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">1. الحماية (Protection)</h3>
+                <p class="text-sm text-slate-600 mt-2">للمعدة، المرارة، ومنع العدوى بأعلى كفاءة لضمان استقرار حالتك
+                    الصحية.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <span class="text-xs text-teal-600 font-bold">الركيزة الثانية</span>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">2. السيولة (Blood Flow)</h3>
+                <p class="text-sm text-slate-600 mt-2">مرحلة الحقن الوقائية أولاً ثم الانتقال لمرحلة الأقراص بانتظام.
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+                <span class="text-xs text-teal-600 font-bold">الركيزة الثالثة</span>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">3. النشاط (Vitality)</h3>
+                <p class="text-sm text-slate-600 mt-2">فيتامينات ومكملات لتعويض الجسم وتقوية الأعصاب والشعر والبشرة.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-kit-medical"></i>
+                </div>
+                <span class="text-xs text-teal-600 font-bold">الركيزة الرابعة</span>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">4. عند اللزوم (Contingency)</h3>
+                <p class="text-sm text-slate-600 mt-2">أدوية للطوارئ والأعراض العارضة (مسكنات، ملينات، ومحاليل جفاف).
+                </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-kit-medical"></i>
+                </div>
+                <span class="text-xs text-teal-600 font-bold">الركيزة الخامسة</span>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">الشكاوي</h3>
+                <p class="text-sm text-slate-600 mt-2">الشكاوي المتوقعة بعد العملية وكيفية التعامل معها.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Protection & Infection Section -->
+    <section id="practical-start-section" class="py-12 md:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="start-guide max-w-4xl mx-auto bg-white p-5 md:p-8 rounded-3xl text-right">
+            <div class="flex items-start gap-3 mb-6">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center text-xl flex-shrink-0">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div>
+                    <span class="text-xs text-teal-600 font-bold">اول حاجة</span>
+                    <h2 class="text-xl md:text-3xl font-black text-slate-800 mt-1">الادوية بعد العملية</h2>
+                </div>
+            </div>
+
+            <div class="start-alert rounded-2xl p-4 md:p-5 mb-5">
+                <p class="text-sm md:text-base text-teal-900 leading-relaxed">بعد العملية بيوم (يوم الافاقة الصبح): مفيش
+                    اي ادوية هتتاخد عن طريق الفم. ادويتنا كلها هناخدها في المستشفي عن طريق المحلول.</p>
+            </div>
+
+            <div class="start-question rounded-2xl p-4 md:p-5 mb-5">
+                <h3 class="font-black text-teal-700 text-base md:text-lg">طب هنبدا ناخد الادوية الي في الروشتة امتي؟
+                </h3>
+                <p class="text-sm md:text-base text-slate-700 mt-3 leading-relaxed">
+                    اول ﻳﻮم ﺑﻌﺪ ﻳﻮم اﻻﻓﺎﻗﺔ اﻟﺼﺒﺢ
+                    ﻳﻌﻨﻲ ﻟﻮ اﻧﺖ ﻋﺎﻣﻞ اﻟﻌﻤﻠﻴﺔ اﻻﺗﻨﻴﻦ و اﻻﻓﺎﻗﺔ ﻛﺎﻧﺖ
+                    اﻟﺜﻼﺛﺎء ﻳﺒﻘﻲ ﻫﻨﺒﺪا اﻻدوﻳﺔ ﺑﺘﺎﻋﺘﻨﺎ ﻣﻦ ﻳﻮم اﻻرﺑﻌﺎء و
+                    ﻟﻮ ﻋﺎﻣﻞ اﻟﻌﻤﻠﻴﺔ اﻻرﺑﻌﺎء و اﻻﻓﺎﻗﺔ ﻛﺎﻧﺖ اﻟﺨﻤﻴﺲ
+                    ﻫﻨﺒﺪا اﻻدوﻳﺔ ﻳﻮم اﻟﺠﻤﻌﺔ
+                    .</p>
+            </div>
+
+            <!-- <div class="start-day-card p-4 md:p-5 rounded-2xl text-sm md:text-base text-slate-700 leading-relaxed mb-5">
+                يعني لو انت عامل العملية الاتنين و الافاقة كانت الثلاثاء يبقي هنبدا الادوية بتاعتنا من يوم الاربعاء و لو
+                عامل العملية الاربعاء و الافاقة كانت الخميس هنبدا الادوية يوم الجمعة.
+            </div> -->
+
+            <div class="start-question rounded-2xl p-4 md:p-5">
+                <h3 class="font-black text-teal-700 text-base md:text-lg">طب ايه الادوية الي هاخدها و هاخد منها امتي و
+                    قد ايه؟</h3>
+                <p class="text-sm md:text-base text-slate-700 mt-3 leading-relaxed">هشرحلك كل حاجة دلوقتي و هوريك
+                    الادوية بمواعيدها و جرعاتها.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="protection-section" class="post-op-section py-12 bg-teal-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span
+                    class="inline-flex items-center gap-2 text-teal-200 text-xs font-bold bg-white/10 border border-white/10 px-3 py-1.5 rounded-full">
+                    <i class="fa-solid fa-notes-medical"></i>
+                    خطة العلاج الأساسية
+                </span>
+                <h2 class="text-2xl md:text-3xl font-black mt-3">أولًا: الجزء العلاجي (يوم الأربعاء/الجمعة)</h2>
+                <p class="text-teal-200 text-sm mt-2 max-w-xl mx-auto leading-relaxed">الجزء العلاجي الذي يبدأ يوم
+                    الأربعاء أو الجمعة حسب يوم العملية ويوم الإفاقة.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div
+                    class="post-op-card bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-right">
+                    <div class="medicine-image-slot"><i class="fa-solid fa-image text-2xl"></i></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-teal-500 text-white text-xs px-3 py-1 rounded-full font-bold">حماية
+                            المعدة</span>
+                        <i class="fa-solid fa-capsules text-2xl text-teal-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Controloc 40 mg</h3>
+                    <p class="text-xs text-teal-200 mt-1">قرص يوميًا الساعة 9 الصبح على الريق</p>
+                    <ul class="dose-list mt-4 space-y-2 text-sm text-slate-100">
+                        <li><strong class="text-teal-300">الجرعة:</strong> قرص يوميًا الساعة 9 الصبح على الريق</li>
+                        <li><strong class="text-teal-300">المدة:</strong> لمدة 3 شهور</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="post-op-card bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-right">
+                    <div class="medicine-image-slot"><i class="fa-solid fa-image text-2xl"></i></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-teal-500 text-white text-xs px-3 py-1 rounded-full font-bold">مضاد حيوي</span>
+                        <i class="fa-solid fa-shield-virus text-2xl text-teal-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Tavanic 500</h3>
+                    <p class="text-xs text-teal-200 mt-1">الوقاية من العدوى</p>
+                    <ul class="dose-list mt-4 space-y-2 text-sm text-slate-100">
+                        <li><strong class="text-teal-300">الجرعة:</strong> قرص يوميًا الساعة 10 صباحًا بعد الفطار</li>
+                        <li><strong class="text-teal-300">المدة:</strong> لمدة 5 أيام فقط</li>
+                        <li><strong class="text-teal-300">المدة:</strong>في حاله المريض تحت ال18سنة يأخذ اوجمنتين </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="post-op-card bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-right">
+                    <div class="medicine-image-slot"><i class="fa-solid fa-image text-2xl"></i></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-teal-500 text-white text-xs px-3 py-1 rounded-full font-bold">المرحلة
+                            الأولى</span>
+                        <i class="fa-solid fa-syringe text-2xl text-teal-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Clexane 40 mg</h3>
+                    <p class="text-xs text-teal-200 mt-1">حقنة سيولة تحت الجلد يوميًا</p>
+                    <ul class="dose-list mt-4 space-y-2 text-sm text-slate-100">
+                        <li><strong class="text-teal-300">الجرعة:</strong> حقنة تحت الجلد يوميًا</li>
+                        <li><strong class="text-teal-300">المدة:</strong> لمدة أسبوع فقط</li>
+                        <li><strong class="text-teal-300">الحفظ:</strong> يحفظ في الثلاجة</li>
+                        <li><strong class="text-teal-300">تنبيه:</strong> يختلف التركيز حسب الوزن ويحدده الدكتور.</li>
+                        <li>عدم التعرض لأشعة الشمس المباشرة</li>
+                    </ul>
+                </div>
+
+                <div
+                    class="post-op-card bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 text-right">
+                    <div class="medicine-image-slot"><i class="fa-solid fa-image text-2xl"></i></div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-teal-500 text-white text-xs px-3 py-1 rounded-full font-bold">المرحلة
+                            الثانية</span>
+                        <i class="fa-solid fa-pills text-2xl text-teal-300"></i>
+                    </div>
+                    <h3 class="text-xl font-bold">Rivarospire 10 mg</h3>
+                    <p class="text-xs text-teal-200 mt-1">تكملة أدوية السيولة</p>
+                    <ul class="dose-list mt-4 space-y-2 text-sm text-slate-100">
+                        <li><strong class="text-teal-300">الجرعة:</strong> قرص يوميًا</li>
+                        <li><strong class="text-teal-300">المدة:</strong> لمدة 3 أسابيع</li>
+                        <li>نبدأ بعد الانتهاء من حقن السيولة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ursofalk-section" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span
+                class="text-teal-600 font-bold text-sm bg-teal-50 px-3 py-1 rounded-full border border-teal-200">ثالثًا:
+                دواء الوقاية من حصوات المرارة</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">يبدأ بعد شهر من العملية</h2>
+            <p class="text-slate-600 text-sm mt-2">يُستخدم حسب تعليمات الطبيب، وبعد التأكد من عدم استئصال المرارة.</p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div class="medicine-image-slot"><i class="fa-solid fa-image text-2xl"></i></div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-right">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="bg-teal-50 text-teal-700 text-xs px-3 py-1 rounded-full font-bold">بعد شهر</span>
+                    <i class="fa-solid fa-shield-heart text-2xl text-teal-600"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-800">Ursofalk</h3>
+                <p class="text-xs text-slate-500 mt-1">دواء الوقاية من حصوات المرارة</p>
+                <ul class="mt-5 space-y-3 text-sm text-slate-700">
+                    <li><strong class="text-teal-700">الجرعة:</strong> قرص يوميًا الساعة 3 العصر</li>
+                    <li><strong class="text-teal-700">المدة:</strong> لمدة 6 شهور</li>
+                    <li class="bg-amber-50 text-amber-800 p-3 rounded-xl border border-amber-200 text-xs">
+                        <strong>تنبيه:</strong> لا يُستخدم في حالة استئصال المرارة.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="bloodflow-section" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+                class="text-teal-600 font-bold text-sm bg-teal-50 px-3 py-1 rounded-full border border-teal-200">الوقاية
+                من الجلطات</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">بروتوكول السيولة (مرحلتان أساسيتان)</h2>
+            <p class="text-slate-600 text-sm mt-2">يرجى عدم تعريض الحقنة لأشعة الشمس المباشرة</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-teal-100 relative overflow-hidden text-right">
+                <div class="absolute top-0 right-0 bg-teal-600 text-white text-xs px-4 py-1.5 rounded-bl-2xl font-bold">
+                    المرحلة الأولى</div>
+                <div class="flex items-center gap-4 mb-4">
+                    <div
+                        class="w-14 h-14 bg-teal-50 text-teal-700 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-syringe"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-800">Clexane</h3>
+                        <span class="text-xs text-teal-600 font-bold">حقن السيولة</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 text-slate-700 text-sm mt-6">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> حقنة كل ٢٤ ساعة
+                    </li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-calendar-days text-teal-600"></i> المدة:
+                        لمدة 6 أيام فقط</li>
+                    <li class="bg-amber-50 text-amber-800 p-3 rounded-xl border border-amber-200 text-xs mt-4">
+                        <i class="fa-solid fa-triangle-exclamation"></i> يرجى عدم تعريض الحقنة لأشعة الشمس.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-teal-100 relative overflow-hidden text-right">
+                <div class="absolute top-0 right-0 bg-teal-600 text-white text-xs px-4 py-1.5 rounded-bl-2xl font-bold">
+                    المرحلة الثانية</div>
+                <div class="flex items-center gap-4 mb-4">
+                    <div
+                        class="w-14 h-14 bg-teal-50 text-teal-700 rounded-2xl flex items-center justify-center text-2xl font-bold">
+                        <i class="fa-solid fa-pills"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-black text-slate-800">Rivarospire 10 mg</h3>
+                        <span class="text-xs text-teal-600 font-bold">أقراص السيولة</span>
+                    </div>
+                </div>
+                <ul class="space-y-3 text-slate-700 text-sm mt-6">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-teal-600"></i> نبدأ فيه لما
+                        نخلص حقن السيولة تماماً</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-sun text-teal-600"></i> الجرعة: قرص يومياً
+                    </li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-calendar-days text-teal-600"></i> المدة:
+                        لمدة 3 أسابيع</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="vitamins-section" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span
+                    class="text-teal-600 font-bold text-sm bg-white px-3 py-1 rounded-full border border-teal-200">ثانيًا:
+                    جزء الفيتامينات (يوم الخميس/السبت)</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-3">الفيتامينات اليومية وصحة الأعصاب</h2>
+                <p class="text-slate-600 text-sm md:text-base mt-3 leading-relaxed">وده اهم جزء بعد العملية عشان بنفقد
+                    وزن و مع الوزن بنفقد فيتامينات و معادن مهمة من الجسم</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="vitamin-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-right">
+                    <div class="medicine-image-slot"><i class="fa-solid fa-image text-2xl"></i></div>
+                    <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">مضغ يومي</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-3">Centrum Multivitamin gummies</h3>
+                    <p class="text-sm text-slate-600 mt-1">شكل الدواء: قطع للمضغ</p>
+                    <div
+                        class="mt-4 bg-teal-50/50 p-3 rounded-xl border border-teal-100 text-sm text-teal-900 font-bold">
+                        لو مضغ: ناخد قطعتين يوميًا الساعة 1 الظهر
+                    </div>
+                    <div
+                        class="mt-4 bg-teal-50/50 p-3 rounded-xl border border-teal-100 text-sm text-teal-900 font-bold">
+                        لو اقراص : ناخد قرص يوميًا بعد الفطار
+                    </div>
+
+                      <div
+                        class="mt-4 bg-teal-50/50 p-3 rounded-xl border border-teal-100 text-sm text-teal-900 font-bold">
+تنبية يفضل البداء اول 3 شهور ب المضغ ثم التكمله بالاقراض                     </div>
+                </div>
+
+                <div class="vitamin-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-right">
+                    <div class="medicine-image-slot"><i class="fa-solid fa-image text-2xl"></i></div>
+                    <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">أقراص مسائية</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-3">Caltrate Soft Chews</h3>
+                    <p class="text-sm text-slate-600 mt-1">شكل الدواء: أقراص أو قطع طرية</p>
+                    <div
+                        class="mt-4 bg-teal-50/50 p-3 rounded-xl border border-teal-100 text-sm text-teal-900 font-bold">
+                        الجرعة: هناخد منه قطعة بليل 9 مساء
+                    </div>
+                </div>
+
+                <div class="vitamin-card bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-right">
+                    <div class="medicine-image-slot"><i class="fa-solid fa-image text-2xl"></i></div>
+                    <span class="text-xs font-bold text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md">حقن الأعصاب</span>
+                    <h3 class="text-lg font-bold text-slate-800 mt-3">Neurobion Ampoules</h3>
+                    <p class="text-sm text-slate-600 mt-1">حقنة عضل (Intramuscular Injection)</p>
+                    <div
+                        class="mt-4 bg-teal-50/50 p-3 rounded-xl border border-teal-100 text-sm text-teal-900 font-bold">
+                        حقنة عضل مرة في الاسبوع لمدة شهر و بعد كدة هنبقي بناخدها مرة في الشهر بس
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contingency-section" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+                class="text-teal-600 font-bold text-sm bg-teal-50 px-3 py-1 rounded-full border border-teal-200">الطوارئ
+                والأعراض العارضة</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">أدوية عند اللزوم فقط</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-right">
+                <div
+                    class="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center font-bold mb-3">
+                    <i class="fa-solid fa-pills"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">Panadol</h3>
+                <p class="text-xs text-slate-500 mt-0.5">مسكن وخافض للحرارة</p>
+                <div class="mt-4 text-sm font-semibold text-teal-800 bg-teal-50 p-3 rounded-xl">
+                    الجرعة: قرصين عند اللزوم كل 8 ساعات.
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-right">
+                <div
+                    class="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center font-bold mb-3">
+                    <i class="fa-solid fa-droplet"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">Picolax (نقط)</h3>
+                <p class="text-xs text-slate-500 mt-0.5">ملين في حالة الإمساك</p>
+                <div class="mt-4 text-sm font-semibold text-teal-800 bg-teal-50 p-3 rounded-xl">
+                    الجرعة: ١٠ نقط على نصف كوب ماء. (نوقفه لما الإمساك يروح).
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 text-right">
+                <div
+                    class="w-10 h-10 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center font-bold mb-3">
+                    <i class="fa-solid fa-glass-water"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">Alexolyte ORS</h3>
+                <p class="text-xs text-slate-500 mt-0.5">محلول معالجة الجفاف</p>
+                <div class="mt-4 text-sm font-semibold text-teal-800 bg-teal-50 p-3 rounded-xl">
+                    الحالة: في حالة الضغط الواطي أو عدم شرب سوائل كفاية (على نصف كوب ماء).
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="supplies-section" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span
+                    class="text-teal-600 font-bold text-sm bg-white px-3 py-1 rounded-full border border-teal-200">مستلزمات
+                    إضافية</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">أشياء تساعدك في فترة التعافي</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-right">
+                    <div
+                        class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-glass-water"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800">Alexolyte</h3>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">محلول معالجة الجفاف عند انخفاض الضغط أو عدم
+                        شرب سوائل كافية.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 text-right">
+                    <div
+                        class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800">Royal Tea</h3>
+                    <p class="text-sm text-slate-600 mt-2 leading-relaxed">مرتين يوميًا لمدة أسبوعين، مع الالتزام
+                        بالسوائل والحركة حسب تعليمات الطبيب.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="followup-overview" class="hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <span class="text-teal-600 font-bold text-sm bg-teal-50 px-3 py-1 rounded-full border border-teal-200">خريطة
+                المتابعة</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-3">خطتك بعد العملية في ٣ خطوات</h2>
+            <p class="text-slate-600 text-sm mt-2">نظرة سريعة تساعدك على فهم دور كل جزء من برنامج التعافي.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-5">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-11 h-11 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-lg mb-4">
+                    <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">دعم البروتين</h3>
+                <p class="text-sm text-slate-600 mt-2 leading-relaxed">يساعد البروتين على دعم التغذية اليومية واستعادة
+                    النشاط تدريجيًا.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-11 h-11 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-lg mb-4">
+                    <i class="fa-solid fa-capsules"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">تعويض العناصر</h3>
+                <p class="text-sm text-slate-600 mt-2 leading-relaxed">الفيتامينات والمعادن جزء من خطة المتابعة طويلة
+                    الأمد حسب إرشادات الطبيب.</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-11 h-11 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-lg mb-4">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800">الالتزام والمتابعة</h3>
+                <p class="text-sm text-slate-600 mt-2 leading-relaxed">انتظام الجرعات ومراجعة الطبيب يساعدان على استمرار
+                    التعافي بأمان.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="followup-section" class="py-16 bg-teal-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span
+                    class="bg-teal-700 text-teal-200 font-bold text-sm px-3 py-1 rounded-full border border-teal-600">برنامج
+                    التعافي طويل الأمد</span>
+                <h2 class="text-2xl md:text-3xl font-black mt-2">روشتة المتابعة ومكملات التغذية</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10 text-right">
+                    <h3 class="text-lg font-bold">Whey Protein</h3>
+                    <p class="text-xs text-teal-200 mt-1">23.5 جرام بروتين | 98 سعرة | صفر سكر مضاف</p>
+                    <div class="mt-4 text-sm space-y-1 text-slate-100">
+                        <p><strong>الجرعة:</strong> سكوب مع الماء أو اللبن (-1)</p>
+                        <p><strong>التوقيت:</strong> مرة صباحا ومرة مساءا</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10 text-right">
+                    <h3 class="text-lg font-bold">Iron Supplement (Sideral Active)</h3>
+                    <p class="text-xs text-teal-200 mt-1">مكمل الحديد لدعم الطاقة</p>
+                    <div class="mt-4 text-sm space-y-1 text-slate-100">
+                        <p><strong>الجرعة:</strong> 1 sachet daily after lunch</p>
+                        <p><strong>المدة:</strong> لمدة 12 شهر</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10 text-right">
+                    <h3 class="text-lg font-bold">Vitamin B12 (Devit 300,000 IU)</h3>
+                    <p class="text-xs text-teal-200 mt-1">حقنة عضل (IM)</p>
+                    <div class="mt-4 text-sm space-y-1 text-slate-100">
+                        <p><strong>الجرعة:</strong> 1 injection every month</p>
+                        <p><strong>المدة:</strong> لمدة 6 شهور</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10 text-right">
+                    <h3 class="text-lg font-bold">Limitless Lipoferrex & ACM Novaphere</h3>
+                    <p class="text-xs text-teal-200 mt-1">دعم الشعر والبشرة</p>
+                    <div class="mt-4 text-sm space-y-1 text-slate-100">
+                        <p><strong>الجرعة:</strong> 2 capsules after breakfast</p>
+                        <p><strong>المدة:</strong> لمدة 12 شهر</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10 text-right">
+                    <h3 class="text-lg font-bold">Biodal 50,000 IU</h3>
+                    <p class="text-xs text-teal-200 mt-1">فيتامين د</p>
+                    <div class="mt-4 text-sm space-y-1 text-slate-100">
+                        <p><strong>الجرعة:</strong> 1 tablet weekly</p>
+                        <p><strong>المدة:</strong> لمدة 8 شهور</p>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 p-6 rounded-2xl border border-white/10 text-right">
+                    <h3 class="text-lg font-bold">Biotin 10,000</h3>
+                    <p class="text-xs text-teal-200 mt-1">تقوية الشعر والأظافر</p>
+                    <div class="mt-4 text-sm space-y-1 text-slate-100">
+                        <p><strong>الجرعة:</strong> 2 tablets after breakfast</p>
+                        <p><strong>المدة:</strong> لمدة 12 شهر</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services-overview" class="hidden py-12 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span
+                    class="text-teal-600 font-bold text-sm bg-white px-3 py-1 rounded-full border border-teal-200">رعاية
+                    من مكان واحد</span>
+                <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-3">كل ما تحتاجه في رحلة التعافي</h2>
+                <p class="text-slate-600 text-sm mt-2">خدمات عملية مصممة لتسهيل خطواتك من صرف الروشتة حتى المتابعة.</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right"><i
+                        class="fa-solid fa-file-prescription text-teal-600 text-2xl"></i>
+                    <h3 class="text-lg font-bold text-slate-800 mt-4">تنفيذ الروشتة</h3>
+                    <p class="text-sm text-slate-600 mt-2">تجهيز الأدوية والمكملات المطلوبة بدقة.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right"><i
+                        class="fa-solid fa-truck-fast text-teal-600 text-2xl"></i>
+                    <h3 class="text-lg font-bold text-slate-800 mt-4">توصيل للمنزل</h3>
+                    <p class="text-sm text-slate-600 mt-2">استلام احتياجاتك بسهولة مع مراعاة التخزين.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right"><i
+                        class="fa-solid fa-headset text-teal-600 text-2xl"></i>
+                    <h3 class="text-lg font-bold text-slate-800 mt-4">دعم مستمر</h3>
+                    <p class="text-sm text-slate-600 mt-2">تواصل مباشر للاستفسار عن الخطة والجرعات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services-section" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+                class="text-teal-600 font-bold text-sm bg-teal-50 px-3 py-1 rounded-full border border-teal-200">خدماتنا
+                المميزة</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">خدمات صيدليات Capital Care لراحتكم</h2>
+            <p class="text-slate-600 text-sm mt-2">نوفر لكم رعاية صيدلية متكاملة ودعماً مستمراً في كل الأوقات</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-prescription-bottle-medical"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">صرف وتوفير الروشتات</h3>
+                <p class="text-sm text-slate-600 mt-2">نوفر جميع الأدوية المحلية والمستوردة بدقة صيدلية كاملة وتحت إشراف
+                    مباشر لضمان سلامتك.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-box-tissue"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">باقات التعافي بعد العمليات</h3>
+                <p class="text-sm text-slate-600 mt-2">باقات مخصصة لمرضى جراحات السمنة والتكميم وغيرها، تشمل الفيتامينات
+                    والبروتينات الضرورية لفترة نقاهة آمنة.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-user-doctor"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">الاستشارات والدعم الطبي</h3>
+                <p class="text-sm text-slate-600 mt-2">خدمة تواصل مباشر مع د. أحمد المصري وفريق الدعم الصيدلي للإجابة عن
+                    تساؤلاتكم وتعديل الجرعات.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-truck-fast"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">توصيل سريع للمنازل</h3>
+                <p class="text-sm text-slate-600 mt-2">خدمة شحن وتوصيل سريعة وآمنة لكافة الأدوية والمكملات لباب منزلك مع
+                    الالتزام التام بشروط التخزين الآمن.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-notes-medical"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">متابعة الجرعات والخطط</h3>
+                <p class="text-sm text-slate-600 mt-2">نساعدك على تنظيم مواعيد أدويتك ونذكرك بجرعاتك بانتظام لضمان
+                    الالتزام والحصول على أفضل نتائج علاجية.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div
+                    class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h3 class="text-lg font-bold text-slate-800 mt-1">منتجات أصلية 100%</h3>
+                <p class="text-sm text-slate-600 mt-2">نضمن لك الحصول على فيتامينات ومكملات ومستحضرات تجميل أصلية تماماً
+                    من الوكلاء المعتمدين.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="complaints-overview" class="hidden py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-right flex items-start gap-4">
+            <div
+                class="w-11 h-11 bg-white text-amber-600 rounded-xl flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <div>
+                <h2 class="text-xl font-black text-slate-800">قبل ما تقلق، اعرف المتوقع</h2>
+                <p class="text-sm text-slate-600 mt-2 leading-relaxed">بعض الأعراض تكون شائعة بعد العملية، لكن تسجيل
+                    شدتها والتواصل عند تفاقمها يساعدان على التصرف الصحيح.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="complaints-section" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+                class="text-amber-600 font-bold text-sm bg-amber-50 px-3 py-1 rounded-full border border-amber-200">الركيزة
+                الخامسة</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">الشكاوي المتوقعة بعد العملية</h2>
+            <p class="text-slate-600 text-sm mt-2">أعراض شائعة وطبيعية - تعرف عليها واطمن وكيفية التعامل معها</p>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-10 flex items-start gap-4 text-right">
+            <div
+                class="w-10 h-10 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl flex-shrink-0 mt-0.5">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div>
+                <h4 class="font-bold text-amber-800 text-sm">تنبيه مهم</h4>
+                <p class="text-amber-700 text-xs mt-1 leading-relaxed">هذه الأعراض طبيعية تماماً ومتوقعة بعد العملية،
+                    لكن في حالة تفاقم أي عرض أو ظهور أعراض غير مذكورة، تواصل فوراً مع د. أحمد المصري.</p>
+            </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-amber-100 text-amber-700 text-xs px-2.5 py-1 rounded-full font-bold">شائع
+                        جداً</span>
+                    <div
+                        class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-face-dizzy"></i>
+                    </div>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">الغثيان والتقيؤ</h3>
+                <p class="text-sm text-slate-600 mt-2">طبيعي خلال الأيام الأولى. احرص على شرب السوائل باستمرار وتجنب
+                    الروائح القوية.</p>
+                <div class="mt-4 bg-teal-50 p-3 rounded-xl text-xs text-teal-800 font-semibold">
+                    <i class="fa-solid fa-lightbulb ml-1 text-teal-500"></i>تناول وجبات صغيرة وبطيئة - ابتعد عن الطعام
+                    الدسم.
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-amber-100 text-amber-700 text-xs px-2.5 py-1 rounded-full font-bold">شائع</span>
+                    <div
+                        class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">الإمساك</h3>
+                <p class="text-sm text-slate-600 mt-2">شائع بسبب قلة الأكل والحركة. شرب ماء كافي والحركة تساعد كثيراً.
+                </p>
+                <div class="mt-4 bg-teal-50 p-3 rounded-xl text-xs text-teal-800 font-semibold">
+                    <i class="fa-solid fa-lightbulb ml-1 text-teal-500"></i>استخدم Picolax نقط (١٠ نقط على نصف كوب ماء)،
+                    وقفه لما يزول الإمساك.
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-amber-100 text-amber-700 text-xs px-2.5 py-1 rounded-full font-bold">طبيعي</span>
+                    <div
+                        class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-battery-quarter"></i>
+                    </div>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">التعب والإرهاق</h3>
+                <p class="text-sm text-slate-600 mt-2">طبيعي جداً في الأسابيع الأولى بسبب التخدير والجراحة. يتحسن
+                    تدريجياً مع الوقت.</p>
+                <div class="mt-4 bg-teal-50 p-3 rounded-xl text-xs text-teal-800 font-semibold">
+                    <i class="fa-solid fa-lightbulb ml-1 text-teal-500"></i>التزام بفيتامينات Centrum وNeurobion يساعد
+                    على استعادة الطاقة.
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-amber-100 text-amber-700 text-xs px-2.5 py-1 rounded-full font-bold">مؤقت</span>
+                    <div
+                        class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-person-half-dress"></i>
+                    </div>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">تساقط الشعر</h3>
+                <p class="text-sm text-slate-600 mt-2">يبدأ عادةً بعد ٣-٤ شهور ويتحسن بعد ستة شهور. سببه نقص البروتين
+                    والفيتامينات.</p>
+                <div class="mt-4 bg-teal-50 p-3 rounded-xl text-xs text-teal-800 font-semibold">
+                    <i class="fa-solid fa-lightbulb ml-1 text-teal-500"></i>Biotin + Whey Protein + مكمل الحديد تحل هذه
+                    المشكلة بشكل كبير.
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-amber-100 text-amber-700 text-xs px-2.5 py-1 rounded-full font-bold">انتبه</span>
+                    <div
+                        class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">انخفاض الضغط</h3>
+                <p class="text-sm text-slate-600 mt-2">يحدث عند قلة شرب السوائل أو القيام بسرعة. الإحساس بدوار أو اسوداد
+                    في الرؤية.</p>
+                <div class="mt-4 bg-teal-50 p-3 rounded-xl text-xs text-teal-800 font-semibold">
+                    <i class="fa-solid fa-lightbulb ml-1 text-teal-500"></i>Alexolyte ORS على نصف كوب ماء يساعد فوراً.
+                    شرب ٢.٥ لتر ماء يومياً.
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-amber-100 text-amber-700 text-xs px-2.5 py-1 rounded-full font-bold">شائع</span>
+                    <div
+                        class="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-fire-flame-simple"></i>
+                    </div>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">حرقان المعدة والارتجاع</h3>
+                <p class="text-sm text-slate-600 mt-2">يحدث بسبب تغيير حجم المعدة وحمضية الطعام. يخف بالتدريج.</p>
+                <div class="mt-4 bg-teal-50 p-3 rounded-xl text-xs text-teal-800 font-semibold">
+                    <i class="fa-solid fa-lightbulb ml-1 text-teal-500"></i>Controloc على الريق صباحاً يحمي المعدة ويمنع
+                    الارتجاع.
+                </div>
+            </div>
+
+            <div
+                class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 card-hover text-right sm:col-span-2 lg:col-span-1">
+                <div class="flex justify-between items-start mb-3">
+                    <span class="bg-red-100 text-red-700 text-xs px-2.5 py-1 rounded-full font-bold">طبيعي</span>
+                    <div class="w-10 h-10 bg-red-50 text-red-500 rounded-xl flex items-center justify-center text-lg">
+                        <i class="fa-solid fa-bandage"></i>
+                    </div>
+                </div>
+                <h3 class="text-base font-bold text-slate-800">آلام مكان الجرح</h3>
+                <p class="text-sm text-slate-600 mt-2">ألم خفيف متوقع حول منطقة الجرح ويتحسن خلال أسابيع مع التئام
+                    الطبيعي.</p>
+                <div class="mt-4 bg-teal-50 p-3 rounded-xl text-xs text-teal-800 font-semibold">
+                    <i class="fa-solid fa-lightbulb ml-1 text-teal-500"></i>Panadol قرصين عند اللزوم كل ٨ ساعات. تواصل
+                    لو زاد الألم أو ظهرت إفرازات.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="faq-section" class="hidden py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <span
+                class="text-teal-600 font-bold text-sm bg-teal-50 px-3 py-1 rounded-full border border-teal-200">الأسئلة
+                الشائعة</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">إجابات سريعة على أهم أسئلتك</h2>
+            <p class="text-slate-600 text-sm mt-2">هذه الإرشادات عامة، وأي تعديل في الخطة يكون بعد الرجوع للطبيب.</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-5">
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">متى أبدأ الفيتامينات؟</summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">إذا كانت العملية يوم الاثنين تبدأ الفيتامينات يوم
+                    الخميس، وإذا كانت يوم الأربعاء تبدأ يوم السبت.</p>
+            </details>
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">ماذا أفعل إذا لم أدخل الحمام؟</summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">من الطبيعي عدم دخول الحمام أول يومين. التزم
+                    بالسوائل وRoyal Tea، وإذا استمر الأمر أكثر من 3 أيام تواصل مع الطبيب قبل استخدام الملين.</p>
+            </details>
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">متى أستخدم Rivarospire؟</summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">يبدأ بعد الانتهاء من حقن السيولة، وبنفس موعد
+                    الحقنة، حسب وصف الطبيب.</p>
+            </details>
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">كيف أحفظ حقن السيولة وفيتامين ب؟</summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">يمكن حفظها في الثلاجة أو في درجة حرارة الغرفة حسب
+                    النشرة، مع إخراجها قبل الاستخدام بنصف ساعة وعدم تعريضها للشمس.</p>
+            </details>
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">كيف أتعامل مع ألم منطقة المعدة؟</summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">جرّب تمارين التنفس: خذ نفسًا من الأنف، احبسه 4
+                    ثوانٍ، ثم أخرجه من الفم. إذا زاد الألم تواصل مع الطبيب.</p>
+            </details>
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">متى أبدأ أدوية الشعر والبروتين؟</summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">يتم تحديدها في زيارة المتابعة مع الطبيب، ولا
+                    تبدأها من نفسك.</p>
+            </details>
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">ماذا أفعل أثناء فترة الدورة الشهرية؟</summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">يتم إيقاف دواء السيولة مؤقتًا حتى انتهاء الفترة،
+                    ثم يُستأنف فقط بعد الرجوع للطبيب.</p>
+            </details>
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">هل أستخدم Ursofalk إذا كانت المرارة مستأصلة؟
+                </summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">إذا تم استئصال المرارة، لا تستخدم دواء الوقاية من
+                    حصوات المرارة إلا بتوجيه الطبيب.</p>
+            </details>
+            <details class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm text-right">
+                <summary class="font-bold text-slate-800 cursor-pointer">هل أستمر على الفيتامينات بعد أول ٣ شهور؟
+                </summary>
+                <p class="text-sm text-slate-600 mt-3 leading-relaxed">الفيتامينات تستمر عادة لمدة سنة، وقد يتم الانتقال
+                    من المضغ إلى الأقراص بعد أول ٣ شهور حسب المتابعة.</p>
+            </details>
+        </div>
+        <a href="https://www.youtube.com/watch?v=f7DtTTOC-ws" target="_blank" rel="noopener noreferrer"
+            class="mt-8 flex items-center justify-center gap-3 bg-teal-50 text-teal-800 border border-teal-200 rounded-2xl p-4 font-bold hover:bg-teal-100 transition">
+            <i class="fa-brands fa-youtube text-red-600 text-xl"></i>
+            <span>شاهد طريقة أخذ حقنة السيولة في المنزل</span>
+        </a>
+    </section>
+
+    <section id="cta-section" class="py-16 bg-gradient-to-br from-emerald-600 to-teal-700 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <span
+                class="bg-white/20 text-white text-xs px-3 py-1.5 rounded-full font-bold uppercase tracking-wider backdrop-blur-sm">
+                باقة التعافي المتكاملة
+            </span>
+            <h2 class="text-3xl md:text-4xl font-black">اطلب أدويتك بعد العملية بكل سهولة وأمان</h2>
+            <p class="text-teal-100 text-base max-w-xl mx-auto font-medium">
+                منتجات أصلية 100% | دعم صيدلي كامل | توصيل سريع لبيتك مع صيدليات Capital Care
+            </p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="https://wa.me/201222750363?text=مرحباً، أود طلب أدوية ومكملات بروتوكول ما بعد العملية حسب روشتة د. أحمد المصري"
+                    target="_blank"
+                    class="bg-white text-emerald-800 font-extrabold px-6 py-4 rounded-2xl shadow-xl hover:bg-teal-50 transition flex items-center gap-3 text-base md:text-lg">
+                    <i class="fa-solid fa-cart-shopping text-xl text-emerald-600"></i>
+                    <span>اطلب أدويتك عبر واتساب</span>
+                </a>
+                <a href="https://wa.me/201222750363?text=مرحباً، أود استشارة د. أحمد المصري بخصوص بروتوكول العلاج والجرعات"
+                    target="_blank"
+                    class="bg-teal-900/40 border border-white/30 text-white font-extrabold px-6 py-4 rounded-2xl shadow-xl hover:bg-teal-900/60 transition flex items-center gap-3 text-base md:text-lg">
+                    <i class="fa-solid fa-user-doctor text-xl text-teal-300"></i>
+                    <span>تواصل مع الدعم الصيدلي</span>
+                </a>
+            </div>
+            <p class="text-xs text-teal-200 pt-2">شركاؤك في رحلة التعافي | الخط الساخن: 01222750363</p>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm border-t border-slate-800">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                <span class="text-white font-bold">صيدليات Capital Care</span>
+                <span>- WE CARE ABOUT YOU</span>
+            </div>
+            <div>
+                <span>الدعم الصيدلي: د. أحمد المصري</span> |
+                <a href="tel:201222750363" class="text-teal-400 font-bold hover:underline">+20 12 22750363</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed left-6 bottom-6 z-50 flex flex-col items-start gap-3">
+        <!-- Floating Card -->
+        <div id="floating-whatsapp-card"
+            class="hidden w-72 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transition-all duration-300 transform scale-95 opacity-0 origin-bottom-left mb-3">
+            <div class="bg-emerald-600 text-white p-4 text-right relative">
+                <button onclick="toggleFloatingWhatsapp(false)"
+                    class="absolute top-3 left-3 text-white/80 hover:text-white transition focus:outline-none">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-xl">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-sm">صيدليات Capital Care</h4>
+                        <span class="text-xs text-emerald-100 flex items-center gap-1.5 justify-end">
+                            <span>نشط الآن</span>
+                            <span class="w-2 h-2 bg-green-400 rounded-full inline-block animate-pulse"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 space-y-3 text-right bg-slate-50">
+                <p class="text-xs text-slate-600 leading-relaxed">أهلاً بك! اختر القسم المناسب للتواصل مباشرة عبر
+                    الواتساب:</p>
+
+                <!-- Option 1: Dr. Ahmed El-Masry (Medical Support) -->
+                <a href="https://wa.me/201222750363?text=أود الاستشارة الطبية والدعم الصيدلي" target="_blank"
+                    class="flex items-center justify-between bg-white p-3 rounded-xl border border-slate-100 hover:border-teal-300 hover:shadow-sm transition group">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-teal-50 text-teal-600 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xs font-bold text-slate-800">الاستشارات الطبية</span>
+                            <span class="block text-[10px] text-slate-500">د. أحمد المصري</span>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-teal-600 transition"></i>
+                </a>
+
+                <!-- Option 2: Order Department -->
+                <!-- Note: Change the number '201222750363' in the href below to your second WhatsApp number when available -->
+                <a href="https://wa.me/201222750363?text=أود طلب الأدوية ومكملات التعافي" target="_blank"
+                    class="flex items-center justify-between bg-white p-3 rounded-xl border border-slate-100 hover:border-emerald-300 hover:shadow-sm transition group">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-xs font-bold text-slate-800">طلب وتوصيل الأدوية</span>
+                            <span class="block text-[10px] text-slate-500">قسم الروشتات والطلبات</span>
+                        </div>
+                    </div>
+                    <i
+                        class="fa-solid fa-chevron-left text-xs text-slate-400 group-hover:text-emerald-600 transition"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Floating Trigger Button -->
+        <button id="floating-whatsapp-btn" onclick="toggleFloatingWhatsapp()"
+            class="w-14 h-14 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-105 active:scale-95 transition-all duration-300 relative group focus:outline-none overflow-hidden">
+            <span
+                class="absolute inset-0 rounded-full bg-emerald-600 animate-ping opacity-25 group-hover:opacity-0"></span>
+            <i class="fa-brands fa-whatsapp relative z-10"></i>
+        </button>
+    </div>
+
+    <script>
+        // Keep the inner-page navigation below the sticky header.
+        (function () {
+            const header = document.querySelector('header');
+            const navigationCards = document.getElementById('navigation-cards-section');
+            if (header && navigationCards) {
+                const updateHeaderHeight = () => {
+                    document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+                };
+                updateHeaderHeight();
+                window.addEventListener('resize', updateHeaderHeight);
+            }
+        })();
+
+        // Reserve a stable image area for every inner-page explanation card.
+        (function () {
+            const cardSections = ['protection-section', 'bloodflow-section', 'vitamins-section', 'contingency-section',
+                'followup-overview', 'followup-section', 'services-overview', 'services-section', 'complaints-overview',
+                'complaints-section'];
+            cardSections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (!section) return;
+                section.querySelectorAll('.grid > div, .grid > a').forEach(card => {
+                    if (card.querySelector('.medicine-image-slot, .card-image-slot')) return;
+                    const imageSlot = document.createElement('div');
+                    imageSlot.className = 'card-image-slot';
+                    imageSlot.innerHTML = '<i class="fa-solid fa-image text-2xl" aria-hidden="true"></i>';
+                    card.prepend(imageSlot);
+                });
+            });
+        })();
+
+        // Active and Inactive classes for header nav cards
+        const activeCardClasses = ['bg-teal-700', 'text-white', 'border-transparent', 'shadow-sm'];
+        const inactiveCardClasses = ['bg-white', 'text-slate-600', 'border-slate-200'];
+        const activeAmberCardClasses = ['bg-amber-500', 'text-white', 'border-transparent', 'shadow-sm'];
+        const inactiveAmberCardClasses = ['bg-white', 'text-amber-600', 'border-amber-200'];
+        // Legacy tab button classes (kept for compatibility)
+        const activeClasses = ["bg-teal-700", "text-white", "shadow-sm", "font-bold"];
+        const inactiveClasses = ["text-slate-600", "hover:text-teal-700", "hover:bg-slate-100/80", "font-semibold"];
+
+        function switchTab(tabId) {
+            const tabs = {
+                'home': {
+                    cardId: 'nav-card-home',
+                    isAmber: false,
+                    sectionsToShow: ['home-content'],
+                    sectionsToHide: ['practical-start-section', 'protection-section', 'ursofalk-section', 'bloodflow-section', 'vitamins-section', 'contingency-section', 'supplies-section', 'followup-overview', 'followup-section', 'services-overview', 'services-section', 'complaints-overview', 'complaints-section', 'faq-section', 'pillars']
+                },
+                'prescription-practical': {
+                    cardId: 'nav-card-prescription-practical',
+                    isAmber: false,
+                    sectionsToShow: ['practical-start-section', 'protection-section', 'ursofalk-section', 'vitamins-section', 'contingency-section', 'supplies-section', 'pillars'],
+                    sectionsToHide: ['home-content', 'bloodflow-section', 'followup-overview', 'followup-section', 'services-overview', 'services-section', 'complaints-overview', 'complaints-section', 'faq-section']
+                },
+                'prescription-followup': {
+                    cardId: 'nav-card-prescription-followup',
+                    isAmber: false,
+                    sectionsToShow: ['followup-overview', 'followup-section'],
+                    sectionsToHide: ['home-content', 'practical-start-section', 'protection-section', 'ursofalk-section', 'bloodflow-section', 'vitamins-section', 'contingency-section', 'supplies-section', 'services-overview', 'services-section', 'complaints-overview', 'complaints-section', 'faq-section', 'pillars']
+                },
+                'services': {
+                    cardId: 'nav-card-services',
+                    isAmber: false,
+                    sectionsToShow: ['services-overview', 'services-section'],
+                    sectionsToHide: ['home-content', 'practical-start-section', 'protection-section', 'ursofalk-section', 'bloodflow-section', 'vitamins-section', 'contingency-section', 'supplies-section', 'followup-overview', 'followup-section', 'complaints-overview', 'complaints-section', 'faq-section', 'pillars']
+                },
+                'complaints': {
+                    cardId: 'nav-card-complaints',
+                    isAmber: true,
+                    sectionsToShow: ['complaints-overview', 'complaints-section', 'faq-section'],
+                    sectionsToHide: ['home-content', 'practical-start-section', 'protection-section', 'ursofalk-section', 'bloodflow-section', 'vitamins-section', 'contingency-section', 'supplies-section', 'followup-overview', 'followup-section', 'services-overview', 'services-section', 'pillars']
+                },
+                'faq': {
+                    cardId: 'nav-card-faq',
+                    isAmber: false,
+                    sectionsToShow: ['faq-section'],
+                    sectionsToHide: ['home-content', 'practical-start-section', 'protection-section', 'ursofalk-section', 'bloodflow-section', 'vitamins-section', 'contingency-section', 'supplies-section', 'followup-overview', 'followup-section', 'services-overview', 'services-section', 'complaints-overview', 'complaints-section', 'pillars']
+                }
+            };
+
+            // Reset all nav cards
+            ['nav-card-home', 'nav-card-prescription-practical', 'nav-card-prescription-followup', 'nav-card-services', 'nav-card-faq'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.classList.remove(...activeCardClasses);
+                    el.classList.add(...inactiveCardClasses);
+                    // Restore hover classes
+                    el.classList.add('hover:border-teal-400', 'hover:text-teal-700');
+                }
+            });
+            // Reset amber card
+            const amberCard = document.getElementById('nav-card-complaints');
+            if (amberCard) {
+                amberCard.classList.remove(...activeAmberCardClasses);
+                amberCard.classList.add(...inactiveAmberCardClasses);
+            }
+
+            // Activate selected card
+            const activeTab = tabs[tabId];
+            const activeCard = document.getElementById(activeTab.cardId);
+            if (activeCard) {
+                if (activeTab.isAmber) {
+                    activeCard.classList.remove(...inactiveAmberCardClasses);
+                    activeCard.classList.add(...activeAmberCardClasses);
+                } else {
+                    activeCard.classList.remove(...inactiveCardClasses, 'hover:border-teal-400', 'hover:text-teal-700');
+                    activeCard.classList.add(...activeCardClasses);
+                }
+            }
+
+            // Hide/Show sections
+            const navigationCards = document.getElementById('navigation-cards-section');
+            if (navigationCards) {
+                navigationCards.classList.toggle('hidden', tabId === 'home');
+                if (tabId !== 'home') {
+                    navigationCards.classList.remove('nav-enter');
+                    void navigationCards.offsetWidth;
+                    navigationCards.classList.add('nav-enter');
+                }
+            }
+
+            activeTab.sectionsToHide.forEach(id => {
+                const sec = document.getElementById(id);
+                if (sec) sec.classList.add('hidden');
+            });
+            activeTab.sectionsToShow.forEach(id => {
+                const sec = document.getElementById(id);
+                if (sec) {
+                    sec.classList.remove('hidden', 'section-enter');
+                    void sec.offsetWidth;
+                    sec.classList.add('section-enter');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'auto' });
+
+        }
+
+        // Header WhatsApp Dropdown Toggle
+        const headerWhatsappBtn = document.getElementById('header-whatsapp-btn');
+        const headerWhatsappDropdown = document.getElementById('header-whatsapp-dropdown');
+
+        if (headerWhatsappBtn && headerWhatsappDropdown) {
+            headerWhatsappBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isHidden = headerWhatsappDropdown.classList.contains('hidden');
+                if (isHidden) {
+                    headerWhatsappDropdown.classList.remove('hidden');
+                    // Force reflow
+                    headerWhatsappDropdown.offsetHeight;
+                    headerWhatsappDropdown.classList.remove('scale-95', 'opacity-0');
+                    headerWhatsappDropdown.classList.add('scale-100', 'opacity-100');
+                } else {
+                    headerWhatsappDropdown.classList.add('scale-95', 'opacity-0');
+                    headerWhatsappDropdown.classList.remove('scale-100', 'opacity-100');
+                    // Hide after transition ends
+                    setTimeout(() => {
+                        headerWhatsappDropdown.classList.add('hidden');
+                    }, 200);
+                }
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!headerWhatsappBtn.contains(e.target) && !headerWhatsappDropdown.contains(e.target)) {
+                    headerWhatsappDropdown.classList.add('scale-95', 'opacity-0');
+                    headerWhatsappDropdown.classList.remove('scale-100', 'opacity-100');
+                    setTimeout(() => {
+                        headerWhatsappDropdown.classList.add('hidden');
+                    }, 200);
+                }
+            });
+        }
+
+        // Floating WhatsApp Widget Toggle
+        function toggleFloatingWhatsapp(show) {
+            const card = document.getElementById('floating-whatsapp-card');
+            if (!card) return;
+
+            if (show === undefined) {
+                show = card.classList.contains('hidden');
+            }
+
+            if (show) {
+                card.classList.remove('hidden');
+                // Force reflow
+                card.offsetHeight;
+                card.classList.remove('scale-95', 'opacity-0');
+                card.classList.add('scale-100', 'opacity-100');
+            } else {
+                card.classList.add('scale-95', 'opacity-0');
+                card.classList.remove('scale-100', 'opacity-100');
+                setTimeout(() => {
+                    card.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        // Close floating card if clicked outside
+        document.addEventListener('click', (e) => {
+            const widgetContainer = document.getElementById('floating-whatsapp-btn')?.parentElement;
+            const card = document.getElementById('floating-whatsapp-card');
+            if (widgetContainer && !widgetContainer.contains(e.target) && card && !card.classList.contains('hidden')) {
+                toggleFloatingWhatsapp(false);
+            }
+        });
+
+        switchTab('home');
+    </script>
+
+    <script>
+        (function () {
+            const gate = document.getElementById('login-gate');
+            const form = document.getElementById('login-form');
+            const errorMsg = document.getElementById('login-error');
+
+            if (sessionStorage.getItem('authed') === 'true') {
+                gate.remove();
+                return;
+            }
+
+            document.body.style.overflow = 'hidden';
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                errorMsg.classList.add('hidden');
+
+                const username = document.getElementById('login-username').value.trim();
+                const password = document.getElementById('login-password').value;
+
+                let data;
+                try {
+                    const res = await fetch('users.json', { cache: 'no-store' });
+                    data = await res.json();
+                } catch (err) {
+                    errorMsg.textContent = 'تعذر التحقق من البيانات، حاول مرة أخرى';
+                    errorMsg.classList.remove('hidden');
+                    return;
+                }
+
+                const match = (data.users || []).some(
+                    u => u.username === username && u.password === password
+                );
+
+                if (match) {
+                    sessionStorage.setItem('authed', 'true');
+                    document.body.style.overflow = '';
+                    gate.remove();
+                } else {
+                    errorMsg.textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة';
+                    errorMsg.classList.remove('hidden');
+                }
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
