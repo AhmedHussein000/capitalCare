@@ -369,6 +369,69 @@
             transform: rotate(-8deg) scale(1.12);
         }
 
+        body {
+            overflow: hidden;
+        }
+
+        body > * {
+            display: none !important;
+        }
+
+        #login-gate,
+        #construction-section,
+        #construction-section * {
+            display: block !important;
+        }
+
+        #login-gate {
+            display: none !important;
+        }
+
+        .construction-wrap {
+            display: block !important;
+            background: linear-gradient(180deg, #f0fbf9 0%, #f8fafc 100%);
+            padding: 2rem 1rem 0;
+            min-height: 100vh;
+        }
+
+        .construction-shell {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(15, 118, 110, 0.08);
+            border-radius: 28px;
+            box-shadow: 0 18px 40px rgba(15, 118, 110, 0.08);
+            padding: 1rem;
+            min-height: calc(100vh - 2rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .construction-banner {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 82vh;
+            object-fit: contain;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 640px) {
+            .construction-wrap {
+                padding: 1rem 0.75rem 0;
+            }
+
+            .construction-shell {
+                border-radius: 20px;
+                padding: 0.5rem;
+            }
+
+            .construction-banner {
+                max-height: 54vh;
+            }
+        }
+
         @keyframes soft-float {
 
             0%,
@@ -1311,6 +1374,12 @@
     </section> -->
 
     <!-- ===== HOME CONTENT ===== -->
+
+    <section id="construction-section" class="construction-wrap">
+        <div class="construction-shell">
+            <img src="Under Construction.svg" alt="Under Construction" class="construction-banner">
+        </div>
+    </section>
 
     <section id="home-content" class="home-hero-section py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center mb-10 md:mb-14">
@@ -2637,52 +2706,83 @@
             }
         });
 
-        switchTab('home');
+        const constructionSection = document.getElementById('construction-section');
+        const loginGate = document.getElementById('login-gate');
+
+        if (constructionSection) {
+            constructionSection.classList.remove('hidden');
+            document.querySelectorAll('body > *').forEach(el => {
+                if (el !== constructionSection && el !== loginGate) {
+                    el.style.display = 'none';
+                }
+            });
+        }
+
+        if (loginGate) {
+            loginGate.style.display = 'none';
+        }
     </script>
 
     <script>
         (function () {
+            // Hide the login gate immediately (user requested "hide login").
             const gate = document.getElementById('login-gate');
+            if (gate) {
+                gate.style.display = 'none';
+                document.body.style.overflow = '';
+                try { sessionStorage.setItem('authed', 'true'); } catch (e) { }
+                return;
+            }
+
+            // Fallback to original logic if gate not found.
             const form = document.getElementById('login-form');
             const errorMsg = document.getElementById('login-error');
 
             if (sessionStorage.getItem('authed') === 'true') {
-                gate.remove();
+                if (gate) gate.remove();
                 return;
             }
 
-            document.body.style.overflow = 'hidden';
+            if (form) {
+                document.body.style.overflow = 'hidden';
 
-            form.addEventListener('submit', async function (e) {
-                e.preventDefault();
-                errorMsg.classList.add('hidden');
+                form.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    if (errorMsg) errorMsg.classList.add('hidden');
 
-                const username = document.getElementById('login-username').value.trim();
-                const password = document.getElementById('login-password').value;
+                    const usernameEl = document.getElementById('login-username');
+                    const passwordEl = document.getElementById('login-password');
+                    const username = usernameEl ? usernameEl.value.trim() : '';
+                    const password = passwordEl ? passwordEl.value : '';
 
-                let data;
-                try {
-                    const res = await fetch('users.json', { cache: 'no-store' });
-                    data = await res.json();
-                } catch (err) {
-                    errorMsg.textContent = 'تعذر التحقق من البيانات، حاول مرة أخرى';
-                    errorMsg.classList.remove('hidden');
-                    return;
-                }
+                    let data;
+                    try {
+                        const res = await fetch('users.json', { cache: 'no-store' });
+                        data = await res.json();
+                    } catch (err) {
+                        if (errorMsg) {
+                            errorMsg.textContent = 'تعذر التحقق من البيانات، حاول مرة أخرى';
+                            errorMsg.classList.remove('hidden');
+                        }
+                        return;
+                    }
 
-                const match = (data.users || []).some(
-                    u => u.username === username && u.password === password
-                );
+                    const match = (data.users || []).some(
+                        u => u.username === username && u.password === password
+                    );
 
-                if (match) {
-                    sessionStorage.setItem('authed', 'true');
-                    document.body.style.overflow = '';
-                    gate.remove();
-                } else {
-                    errorMsg.textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة';
-                    errorMsg.classList.remove('hidden');
-                }
-            });
+                    if (match) {
+                        sessionStorage.setItem('authed', 'true');
+                        document.body.style.overflow = '';
+                        if (gate) gate.remove();
+                    } else {
+                        if (errorMsg) {
+                            errorMsg.textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة';
+                            errorMsg.classList.remove('hidden');
+                        }
+                    }
+                });
+            }
         })();
     </script>
 
