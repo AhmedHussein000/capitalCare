@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الدعم الصيدلي - د. أحمد المصري | صيدليات    </title>
+    <title>الدعم الصيدلي - د. أحمد المصري | صيدليات Capital Care</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for icons -->
@@ -367,69 +367,6 @@
 
         .home-hero-section .home-card:hover .home-card-icon {
             transform: rotate(-8deg) scale(1.12);
-        }
-
-        body {
-            overflow: hidden;
-        }
-
-        body > * {
-            display: none !important;
-        }
-
-        #login-gate,
-        #construction-section,
-        #construction-section * {
-            display: block !important;
-        }
-
-        #login-gate {
-            display: none !important;
-        }
-
-        .construction-wrap {
-            display: block !important;
-            background: linear-gradient(180deg, #f0fbf9 0%, #f8fafc 100%);
-            padding: 2rem 1rem 0;
-            min-height: 100vh;
-        }
-
-        .construction-shell {
-            max-width: 1600px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.6);
-            border: 1px solid rgba(15, 118, 110, 0.08);
-            border-radius: 28px;
-            box-shadow: 0 18px 40px rgba(15, 118, 110, 0.08);
-            padding: 1rem;
-            min-height: calc(100vh - 2rem);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .construction-banner {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-height: 82vh;
-            object-fit: contain;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 640px) {
-            .construction-wrap {
-                padding: 1rem 0.75rem 0;
-            }
-
-            .construction-shell {
-                border-radius: 20px;
-                padding: 0.5rem;
-            }
-
-            .construction-banner {
-                max-height: 54vh;
-            }
         }
 
         @keyframes soft-float {
@@ -1204,6 +1141,759 @@
             color: #123b5d;
             border-color: #123b5d;
         }
+
+        /* Theme 04: Midnight Clinical — dark glass UI with cyan/violet glow accents. */
+        body.theme-v4 {
+            background-color: #0a1120;
+            color: #e7edf5;
+        }
+
+        .theme-v4 .bg-slate-50,
+        .theme-v4 .bg-white {
+            background-color: #101a2c;
+        }
+
+        .theme-v4 .bg-slate-100 {
+            background-color: #0d1626;
+        }
+
+        .theme-v4 .text-slate-800 {
+            color: #eef3f9;
+        }
+
+        .theme-v4 .text-slate-700 {
+            color: #cfd9e6;
+        }
+
+        .theme-v4 .text-slate-600 {
+            color: #9fadc2;
+        }
+
+        .theme-v4 .text-slate-500,
+        .theme-v4 .text-slate-400 {
+            color: #7c8aa0;
+        }
+
+        .theme-v4 .text-slate-100 {
+            color: #eef3f9;
+        }
+
+        .theme-v4 .border-slate-50,
+        .theme-v4 .border-slate-100,
+        .theme-v4 .border-slate-200 {
+            border-color: rgba(148, 190, 210, 0.16);
+        }
+
+        .theme-v4 .bg-slate-900 {
+            background-color: #060a13;
+        }
+
+        .theme-v4 .border-slate-800 {
+            border-color: rgba(148, 190, 210, 0.12);
+        }
+
+        .theme-v4 .bg-teal-700,
+        .theme-v4 .bg-teal-900 {
+            background-color: #0e2a34;
+        }
+
+        .theme-v4 .bg-teal-600 {
+            background-color: #0891b2;
+        }
+
+        .theme-v4 .bg-teal-500 {
+            background-color: #22d3ee;
+        }
+
+        .theme-v4 .bg-teal-50,
+        .theme-v4 .bg-teal-100 {
+            background-color: rgba(34, 211, 238, 0.1);
+        }
+
+        .theme-v4 .text-teal-800,
+        .theme-v4 .text-teal-700,
+        .theme-v4 .text-teal-600 {
+            color: #67e8f9;
+        }
+
+        .theme-v4 .text-teal-500,
+        .theme-v4 .text-teal-400,
+        .theme-v4 .text-teal-300,
+        .theme-v4 .text-teal-200,
+        .theme-v4 .text-teal-100 {
+            color: #a5f3fc;
+        }
+
+        .theme-v4 .border-teal-100,
+        .theme-v4 .border-teal-200,
+        .theme-v4 .border-teal-300,
+        .theme-v4 .border-teal-400,
+        .theme-v4 .border-teal-600 {
+            border-color: rgba(34, 211, 238, 0.35);
+        }
+
+        .theme-v4 .ring-teal-600 {
+            --tw-ring-color: #22d3ee;
+        }
+
+        .theme-v4 .bg-emerald-600 {
+            background-color: #0d9488;
+        }
+
+        .theme-v4 .bg-emerald-700 {
+            background-color: #0b7a70;
+        }
+
+        .theme-v4 .bg-emerald-50 {
+            background-color: rgba(45, 212, 191, 0.1);
+        }
+
+        .theme-v4 .text-emerald-800,
+        .theme-v4 .text-emerald-600 {
+            color: #5eead4;
+        }
+
+        .theme-v4 .text-emerald-100 {
+            color: #ccfbf1;
+        }
+
+        .theme-v4 .border-emerald-300 {
+            border-color: rgba(94, 234, 212, 0.4);
+        }
+
+        .theme-v4 .bg-sky-50 {
+            background-color: rgba(56, 189, 248, 0.1);
+        }
+
+        .theme-v4 .text-sky-600 {
+            color: #7dd3fc;
+        }
+
+        .theme-v4 .text-sky-100 {
+            color: #e0f2fe;
+        }
+
+        .theme-v4 .bg-amber-50 {
+            background-color: rgba(251, 191, 36, 0.1);
+        }
+
+        .theme-v4 .bg-amber-500 {
+            background-color: #fbbf24;
+        }
+
+        .theme-v4 .text-amber-600,
+        .theme-v4 .text-amber-700 {
+            color: #fcd34d;
+        }
+
+        .theme-v4 .text-amber-100,
+        .theme-v4 .text-amber-800 {
+            color: #fde68a;
+        }
+
+        .theme-v4 .border-amber-200,
+        .theme-v4 .border-amber-400 {
+            border-color: rgba(251, 191, 36, 0.35);
+        }
+
+        .theme-v4 .bg-red-50,
+        .theme-v4 .bg-red-100 {
+            background-color: rgba(248, 113, 113, 0.12);
+        }
+
+        .theme-v4 .text-red-500,
+        .theme-v4 .text-red-600,
+        .theme-v4 .text-red-700 {
+            color: #fca5a5;
+        }
+
+        .theme-v4 .from-teal-600,
+        .theme-v4 .from-emerald-600 {
+            --tw-gradient-from: #0891b2 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(8 145 178 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v4 .to-teal-800,
+        .theme-v4 .to-teal-700 {
+            --tw-gradient-to: #0e2a34 var(--tw-gradient-to-position);
+        }
+
+        .theme-v4 .from-sky-600 {
+            --tw-gradient-from: #0ea5b7 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(14 165 183 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v4 .to-blue-700 {
+            --tw-gradient-to: #1e40af var(--tw-gradient-to-position);
+        }
+
+        .theme-v4 .from-amber-500 {
+            --tw-gradient-from: #d97706 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(217 119 6 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v4 .to-orange-600 {
+            --tw-gradient-to: #9a3412 var(--tw-gradient-to-position);
+        }
+
+        .theme-v4 header {
+            background-color: rgba(10, 17, 32, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(34, 211, 238, 0.18);
+            box-shadow: 0 1px 0 rgba(34, 211, 238, 0.08);
+        }
+
+        .theme-v4 header .bg-teal-700 {
+            background: linear-gradient(135deg, #0891b2, #22d3ee);
+            box-shadow: 0 0 18px rgba(34, 211, 238, 0.45);
+        }
+
+        .theme-v4 .home-hero-section {
+            background:
+                radial-gradient(60% 50% at 15% 0%, rgba(34, 211, 238, 0.14) 0%, transparent 60%),
+                radial-gradient(50% 45% at 100% 10%, rgba(129, 140, 248, 0.14) 0%, transparent 60%),
+                #0a1120;
+        }
+
+        .theme-v4 .home-hero-section::before {
+            opacity: 0.5;
+            background-image: linear-gradient(rgba(148, 190, 210, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 190, 210, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: linear-gradient(to bottom, black, transparent 86%);
+        }
+
+        .theme-v4 .home-hero-section .home-kicker {
+            color: #a5f3fc;
+            background-color: rgba(34, 211, 238, 0.1);
+            border-color: rgba(34, 211, 238, 0.35);
+            box-shadow: 0 0 20px rgba(34, 211, 238, 0.18);
+            animation: none;
+        }
+
+        .theme-v4 .home-hero-section h1 {
+            color: #f4f8fc;
+            text-shadow: 0 0 30px rgba(34, 211, 238, 0.25);
+        }
+
+        .theme-v4 .home-hero-section h1::after {
+            background: linear-gradient(90deg, #22d3ee, #818cf8);
+            box-shadow: 0 0 14px rgba(34, 211, 238, 0.5);
+        }
+
+        .theme-v4 .home-hero-section .home-card {
+            --card-accent: #22d3ee !important;
+            background-color: #101a2c;
+            border-color: rgba(148, 190, 210, 0.14);
+            border-top-color: var(--card-accent);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(34, 211, 238, 0.06);
+        }
+
+        .theme-v4 .home-hero-section .home-card:nth-child(2) {
+            --card-accent: #818cf8 !important;
+        }
+
+        .theme-v4 .home-hero-section .home-card:nth-child(3) {
+            --card-accent: #38bdf8 !important;
+        }
+
+        .theme-v4 .home-hero-section .home-card:nth-child(4) {
+            --card-accent: #fbbf24 !important;
+        }
+
+        .theme-v4 .home-hero-section .home-card:hover {
+            box-shadow: 0 26px 48px rgba(0, 0, 0, 0.45), 0 0 30px rgba(34, 211, 238, 0.22);
+        }
+
+        .theme-v4 .faq-home-card {
+            background: conic-gradient(from 210deg, #0891b2 0 25%, #22d3ee 25% 50%, #818cf8 50% 75%, #fbbf24 75% 100%);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        .theme-v4 .faq-home-card .faq-card-content {
+            background: rgba(6, 10, 19, 0.85);
+        }
+
+        .theme-v4 #navigation-cards-section {
+            background-color: rgba(10, 17, 32, 0.92);
+            backdrop-filter: blur(10px);
+            border-color: rgba(34, 211, 238, 0.14);
+            box-shadow: none;
+        }
+
+        .theme-v4 #cta-section {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background: #0a1120;
+            border-top: 1px solid rgba(34, 211, 238, 0.18);
+            border-bottom: 1px solid rgba(34, 211, 238, 0.18);
+        }
+
+        .theme-v4 #cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 1;
+            background-image: none;
+            background:
+                radial-gradient(45% 80% at 20% 30%, rgba(34, 211, 238, 0.18) 0%, transparent 70%),
+                radial-gradient(45% 80% at 80% 70%, rgba(129, 140, 248, 0.16) 0%, transparent 70%);
+        }
+
+        .theme-v4 #cta-section>div>span {
+            color: #a5f3fc;
+            background: rgba(34, 211, 238, 0.12);
+            border: 1px solid rgba(34, 211, 238, 0.3);
+        }
+
+        .theme-v4 #cta-section>div>h2 {
+            color: #f4f8fc;
+        }
+
+        .theme-v4 #cta-section>div>p:first-of-type,
+        .theme-v4 #cta-section>div>p:last-child {
+            color: #9fadc2;
+        }
+
+        .theme-v4 #cta-section>div>div a:last-child {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(34, 211, 238, 0.35);
+            color: #e7edf5;
+        }
+
+        @keyframes v4-page-enter {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes v4-card-enter {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+                filter: brightness(0.7);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                filter: brightness(1);
+            }
+        }
+
+        @keyframes v4-nav-enter {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .theme-v4 {
+            animation: v4-page-enter 0.6s ease-out both;
+        }
+
+        .theme-v4 #home-content .grid>* {
+            animation-name: v4-card-enter;
+        }
+
+        .theme-v4 #navigation-cards-section:not(.hidden),
+        .theme-v4 #navigation-cards-section.nav-enter {
+            animation-name: v4-nav-enter;
+        }
+
+        /* Theme 05: Warm Apothecary — cream, forest green, and terracotta boutique-wellness direction. */
+        body.theme-v5 {
+            background-color: #fbf6ee;
+            color: #2f2418;
+        }
+
+        .theme-v5 .bg-slate-50 {
+            background-color: #fbf6ee;
+        }
+
+        .theme-v5 .bg-white {
+            background-color: #fffdf8;
+        }
+
+        .theme-v5 .bg-slate-100 {
+            background-color: #f5ecdd;
+        }
+
+        .theme-v5 .text-slate-800 {
+            color: #2f2418;
+        }
+
+        .theme-v5 .text-slate-700 {
+            color: #4a3c2b;
+        }
+
+        .theme-v5 .text-slate-600 {
+            color: #6b5a47;
+        }
+
+        .theme-v5 .text-slate-500,
+        .theme-v5 .text-slate-400 {
+            color: #8a7862;
+        }
+
+        .theme-v5 .text-slate-100 {
+            color: #fdf8ef;
+        }
+
+        .theme-v5 .border-slate-50,
+        .theme-v5 .border-slate-100,
+        .theme-v5 .border-slate-200 {
+            border-color: #ecdfc9;
+        }
+
+        .theme-v5 .bg-slate-900 {
+            background-color: #26200e;
+        }
+
+        .theme-v5 .border-slate-800 {
+            border-color: #3d3620;
+        }
+
+        .theme-v5 .bg-teal-700,
+        .theme-v5 .bg-teal-900 {
+            background-color: #1f5f4a;
+        }
+
+        .theme-v5 .bg-teal-600 {
+            background-color: #2c7a5b;
+        }
+
+        .theme-v5 .bg-teal-500 {
+            background-color: #3f9c78;
+        }
+
+        .theme-v5 .bg-teal-50,
+        .theme-v5 .bg-teal-100 {
+            background-color: #eaf3ec;
+        }
+
+        .theme-v5 .text-teal-800,
+        .theme-v5 .text-teal-700,
+        .theme-v5 .text-teal-600 {
+            color: #1f5f4a;
+        }
+
+        .theme-v5 .text-teal-500,
+        .theme-v5 .text-teal-400,
+        .theme-v5 .text-teal-300,
+        .theme-v5 .text-teal-200,
+        .theme-v5 .text-teal-100 {
+            color: #cfe8da;
+        }
+
+        .theme-v5 .border-teal-100,
+        .theme-v5 .border-teal-200,
+        .theme-v5 .border-teal-300,
+        .theme-v5 .border-teal-400,
+        .theme-v5 .border-teal-600 {
+            border-color: #cfe3d6;
+        }
+
+        .theme-v5 .ring-teal-600 {
+            --tw-ring-color: #2c7a5b;
+        }
+
+        .theme-v5 .bg-emerald-600 {
+            background-color: #3d6b4f;
+        }
+
+        .theme-v5 .bg-emerald-700 {
+            background-color: #2c5240;
+        }
+
+        .theme-v5 .bg-emerald-50 {
+            background-color: #eef4ea;
+        }
+
+        .theme-v5 .text-emerald-800,
+        .theme-v5 .text-emerald-600 {
+            color: #3c6b4a;
+        }
+
+        .theme-v5 .text-emerald-100 {
+            color: #e6f0e5;
+        }
+
+        .theme-v5 .border-emerald-300 {
+            border-color: #cadfc7;
+        }
+
+        .theme-v5 .bg-sky-50 {
+            background-color: #f2ece0;
+        }
+
+        .theme-v5 .text-sky-600 {
+            color: #a8703f;
+        }
+
+        .theme-v5 .text-sky-100 {
+            color: #f4ede2;
+        }
+
+        .theme-v5 .bg-amber-50 {
+            background-color: #fbeee0;
+        }
+
+        .theme-v5 .bg-amber-500 {
+            background-color: #c96a4b;
+        }
+
+        .theme-v5 .text-amber-600,
+        .theme-v5 .text-amber-700 {
+            color: #a8503a;
+        }
+
+        .theme-v5 .text-amber-100,
+        .theme-v5 .text-amber-800 {
+            color: #7c3e2c;
+        }
+
+        .theme-v5 .border-amber-200,
+        .theme-v5 .border-amber-400 {
+            border-color: #f0c9b8;
+        }
+
+        .theme-v5 .bg-red-50,
+        .theme-v5 .bg-red-100 {
+            background-color: #fbe9e4;
+        }
+
+        .theme-v5 .text-red-500,
+        .theme-v5 .text-red-600,
+        .theme-v5 .text-red-700 {
+            color: #b3503c;
+        }
+
+        .theme-v5 .from-teal-600,
+        .theme-v5 .from-emerald-600 {
+            --tw-gradient-from: #1f5f4a var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(31 95 74 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v5 .to-teal-800,
+        .theme-v5 .to-teal-700 {
+            --tw-gradient-to: #163f31 var(--tw-gradient-to-position);
+        }
+
+        .theme-v5 .from-sky-600 {
+            --tw-gradient-from: #a8703f var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(168 112 63 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v5 .to-blue-700 {
+            --tw-gradient-to: #7c5228 var(--tw-gradient-to-position);
+        }
+
+        .theme-v5 .from-amber-500 {
+            --tw-gradient-from: #c96a4b var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(201 106 75 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v5 .to-orange-600 {
+            --tw-gradient-to: #8a3f26 var(--tw-gradient-to-position);
+        }
+
+        .theme-v5 header {
+            background-color: #fbf6ee;
+            border-bottom: 1px solid #e7d8bd;
+            box-shadow: none;
+        }
+
+        .theme-v5 header .bg-teal-700 {
+            background: linear-gradient(135deg, #1f5f4a, #3f9c78);
+        }
+
+        .theme-v5 .home-hero-section {
+            background: linear-gradient(180deg, #fdf8ee 0%, #fbf6ee 100%);
+        }
+
+        .theme-v5 .home-hero-section::before {
+            opacity: 0.6;
+            background-image: radial-gradient(circle, rgba(31, 95, 74, 0.1) 1.5px, transparent 1.5px);
+            background-size: 26px 26px;
+        }
+
+        .theme-v5 .home-hero-section .home-kicker {
+            color: #1f5f4a;
+            background-color: #eaf3ec;
+            border-color: #cfe3d6;
+            box-shadow: 0 8px 22px rgba(31, 95, 74, 0.12);
+        }
+
+        .theme-v5 .home-hero-section h1 {
+            color: #2f2418;
+            text-shadow: none;
+        }
+
+        .theme-v5 .home-hero-section h1::after {
+            background: linear-gradient(90deg, #1f5f4a, #c96a4b);
+        }
+
+        .theme-v5 .home-hero-section .home-card {
+            --card-accent: #1f5f4a !important;
+            background-color: #fffdf8;
+            border: 1px solid #ecdfc9;
+            border-top: 4px solid var(--card-accent, #1f5f4a);
+            border-radius: 1.75rem;
+            box-shadow: 0 16px 32px rgba(80, 62, 34, 0.08);
+        }
+
+        .theme-v5 .home-hero-section .home-card:nth-child(2) {
+            --card-accent: #c96a4b !important;
+        }
+
+        .theme-v5 .home-hero-section .home-card:nth-child(3) {
+            --card-accent: #caa15a !important;
+        }
+
+        .theme-v5 .home-hero-section .home-card:nth-child(4) {
+            --card-accent: #a8703f !important;
+        }
+
+        .theme-v5 .home-hero-section .home-card:hover {
+            box-shadow: 0 26px 46px rgba(80, 62, 34, 0.14);
+        }
+
+        .theme-v5 .faq-home-card {
+            background: conic-gradient(from 210deg, #1f5f4a 0 25%, #2c7a5b 25% 50%, #c96a4b 50% 75%, #caa15a 75% 100%);
+            box-shadow: 0 18px 36px rgba(80, 62, 34, 0.18);
+        }
+
+        .theme-v5 .faq-home-card .faq-card-content {
+            background: rgba(47, 36, 24, 0.82);
+        }
+
+        .theme-v5 #navigation-cards-section {
+            background-color: #fbf6ee;
+            border-color: #e7d8bd;
+            box-shadow: none;
+        }
+
+        .theme-v5 #navigation-cards-section .nav-header-card {
+            border-radius: 1rem;
+        }
+
+        .theme-v5 #cta-section {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background: linear-gradient(120deg, #1f5f4a 0%, #2c7a5b 55%, #c96a4b 100%);
+        }
+
+        .theme-v5 #cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.5;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.16) 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+
+        .theme-v5 #cta-section>div>span {
+            color: #fdf8ef;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+        }
+
+        .theme-v5 #cta-section>div>p:first-of-type,
+        .theme-v5 #cta-section>div>p:last-child {
+            color: #f3e9d8;
+        }
+
+        .theme-v5 #cta-section>div>div a:last-child {
+            background: rgba(47, 36, 24, 0.28);
+            border-color: rgba(255, 255, 255, 0.35);
+            color: #fdf8ef;
+        }
+
+        @keyframes v5-page-enter {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes v5-card-enter {
+            from {
+                opacity: 0;
+                transform: translateY(16px) scale(0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes v5-nav-enter {
+            from {
+                opacity: 0;
+                transform: translateY(-8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .theme-v5 {
+            animation: v5-page-enter 0.6s ease-out both;
+        }
+
+        .theme-v5 #home-content .grid>* {
+            animation-name: v5-card-enter;
+        }
+
+        .theme-v5 #navigation-cards-section:not(.hidden),
+        .theme-v5 #navigation-cards-section.nav-enter {
+            animation-name: v5-nav-enter;
+        }
+
+        /* Theme switcher floating control */
+        #theme-switcher-btn {
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25);
+        }
+
+        #theme-switcher-panel {
+            transform-origin: bottom left;
+        }
+
+        .theme-swatch {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .theme-swatch:hover {
+            transform: translateY(-2px);
+        }
+
+        .theme-swatch.active {
+            box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px currentColor;
+        }
     </style>
 </head>
 
@@ -1241,7 +1931,7 @@
                 </div>
                 <div>
                     <span class="text-xs text-teal-800 font-bold block tracking-wider">صيدليات</span>
-                    <span class="text-lg font-black text-slate-800">   </span>
+                    <span class="text-lg font-black text-slate-800">Capital Care</span>
                 </div>
             </div>
             <div
@@ -1374,12 +2064,6 @@
     </section> -->
 
     <!-- ===== HOME CONTENT ===== -->
-
-    <section id="construction-section" class="construction-wrap">
-        <div class="construction-shell">
-            <img src="Under Construction.svg" alt="Under Construction" class="construction-banner">
-        </div>
-    </section>
 
     <section id="home-content" class="home-hero-section py-12 md:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="text-center mb-10 md:mb-14">
@@ -2097,7 +2781,7 @@
             <span
                 class="text-teal-600 font-bold text-sm bg-teal-50 px-3 py-1 rounded-full border border-teal-200">خدماتنا
                 المميزة</span>
-            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">خدمات صيدليات     لراحتكم</h2>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-800 mt-2">خدمات صيدليات Capital Care لراحتكم</h2>
             <p class="text-slate-600 text-sm mt-2">نوفر لكم رعاية صيدلية متكاملة ودعماً مستمراً في كل الأوقات</p>
         </div>
 
@@ -2395,7 +3079,7 @@
             </span>
             <h2 class="text-3xl md:text-4xl font-black">اطلب أدويتك بعد العملية بكل سهولة وأمان</h2>
             <p class="text-teal-100 text-base max-w-xl mx-auto font-medium">
-                منتجات أصلية 100% | دعم صيدلي كامل | توصيل سريع لبيتك مع صيدليات    
+                منتجات أصلية 100% | دعم صيدلي كامل | توصيل سريع لبيتك مع صيدليات Capital Care
             </p>
             <div class="pt-4 flex flex-wrap justify-center gap-4">
                 <a href="https://wa.me/201222750363?text=مرحباً، أود طلب أدوية ومكملات بروتوكول ما بعد العملية حسب روشتة د. أحمد المصري"
@@ -2419,7 +3103,7 @@
         <div
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-2">
-                <span class="text-white font-bold">صيدليات    </span>
+                <span class="text-white font-bold">صيدليات Capital Care</span>
                 <span>- WE CARE ABOUT YOU</span>
             </div>
             <div>
@@ -2443,7 +3127,7 @@
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
                     <div>
-                        <h4 class="font-bold text-sm">صيدليات    </h4>
+                        <h4 class="font-bold text-sm">صيدليات Capital Care</h4>
                         <span class="text-xs text-emerald-100 flex items-center gap-1.5 justify-end">
                             <span>نشط الآن</span>
                             <span class="w-2 h-2 bg-green-400 rounded-full inline-block animate-pulse"></span>
@@ -2497,6 +3181,91 @@
             <i class="fa-brands fa-whatsapp relative z-10"></i>
         </button>
     </div>
+
+    <!-- Theme switcher widget -->
+    <div class="fixed right-6 bottom-6 z-50 flex flex-col items-end gap-3">
+        <div id="theme-switcher-panel"
+            class="hidden w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transition-all duration-300 transform scale-95 opacity-0 mb-1">
+            <div class="px-4 py-3 border-b border-slate-100 text-right">
+                <span class="block text-sm font-bold text-slate-800">اختر شكل الموقع</span>
+                <span class="block text-[11px] text-slate-500 mt-0.5">5 تصميمات جاهزة للاختيار بينها</span>
+            </div>
+            <div id="theme-switcher-options" class="p-2.5 space-y-1.5"></div>
+        </div>
+
+        <button id="theme-switcher-btn" onclick="toggleThemeSwitcher()"
+            class="w-14 h-14 bg-slate-800 hover:bg-slate-900 text-white rounded-full flex items-center justify-center text-2xl transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none">
+            <i class="fa-solid fa-palette"></i>
+        </button>
+    </div>
+
+    <script>
+        const SITE_THEMES = [
+            { id: '', name: 'الافتراضي', desc: 'تصميم طبي كلاسيكي - تركواز', color: '#0d5c56' },
+            { id: 'theme-v2', name: 'الأزرق الملكي', desc: 'أزرق ملكي وكورال ونعناعي', color: '#173f8a' },
+            { id: 'theme-v3', name: 'تحريري جريء', desc: 'ألوان جريئة وظلال بارزة', color: '#20b486' },
+            { id: 'theme-v4', name: 'الوضع الليلي', desc: 'داكن أنيق بلمسة نيون سماوي', color: '#22d3ee' },
+            { id: 'theme-v5', name: 'دافئ صيدلاني', desc: 'كريمي دافئ بلمسة أخضر وطوبي', color: '#1f5f4a' },
+        ];
+
+        function applySiteTheme(themeId, persist) {
+            SITE_THEMES.forEach(t => {
+                if (t.id) document.body.classList.remove(t.id);
+            });
+            if (themeId) document.body.classList.add(themeId);
+            if (persist) {
+                try { localStorage.setItem('siteTheme', themeId); } catch (e) { }
+            }
+            document.querySelectorAll('.theme-swatch').forEach(el => {
+                el.classList.toggle('active', el.dataset.themeId === themeId);
+            });
+        }
+
+        function toggleThemeSwitcher(show) {
+            const panel = document.getElementById('theme-switcher-panel');
+            const shouldShow = typeof show === 'boolean' ? show : panel.classList.contains('hidden');
+            if (shouldShow) {
+                panel.classList.remove('hidden');
+                requestAnimationFrame(() => {
+                    panel.classList.remove('scale-95', 'opacity-0');
+                });
+            } else {
+                panel.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => panel.classList.add('hidden'), 200);
+            }
+        }
+
+        (function () {
+            const optionsHost = document.getElementById('theme-switcher-options');
+            SITE_THEMES.forEach(t => {
+                const row = document.createElement('button');
+                row.type = 'button';
+                row.dataset.themeId = t.id;
+                row.className = 'theme-swatch w-full flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 transition text-right';
+                row.style.color = t.color;
+                row.innerHTML =
+                    '<span class="w-8 h-8 rounded-full border border-slate-200 flex-shrink-0" style="background:' + t.color + '"></span>' +
+                    '<span class="flex-1">' +
+                    '<span class="block text-xs font-bold text-slate-800">' + t.name + '</span>' +
+                    '<span class="block text-[10px] text-slate-500">' + t.desc + '</span>' +
+                    '</span>';
+                row.addEventListener('click', () => applySiteTheme(t.id, true));
+                optionsHost.appendChild(row);
+            });
+
+            let savedTheme = '';
+            try { savedTheme = localStorage.getItem('siteTheme') || ''; } catch (e) { }
+            applySiteTheme(savedTheme, false);
+
+            document.addEventListener('click', function (e) {
+                const container = document.getElementById('theme-switcher-btn')?.parentElement;
+                const panel = document.getElementById('theme-switcher-panel');
+                if (container && !container.contains(e.target) && panel && !panel.classList.contains('hidden')) {
+                    toggleThemeSwitcher(false);
+                }
+            });
+        })();
+    </script>
 
     <script>
         // Keep the inner-page navigation below the sticky header.
@@ -2706,83 +3475,56 @@
             }
         });
 
-        const constructionSection = document.getElementById('construction-section');
-        const loginGate = document.getElementById('login-gate');
-
-        if (constructionSection) {
-            constructionSection.classList.remove('hidden');
-            document.querySelectorAll('body > *').forEach(el => {
-                if (el !== constructionSection && el !== loginGate) {
-                    el.style.display = 'none';
-                }
-            });
-        }
-
-        if (loginGate) {
-            loginGate.style.display = 'none';
-        }
+        switchTab('home');
     </script>
 
     <script>
         (function () {
-            // Hide the login gate immediately (user requested "hide login").
             const gate = document.getElementById('login-gate');
-            if (gate) {
-                gate.style.display = 'none';
-                document.body.style.overflow = '';
-                try { sessionStorage.setItem('authed', 'true'); } catch (e) { }
-                return;
-            }
-
-            // Fallback to original logic if gate not found.
             const form = document.getElementById('login-form');
             const errorMsg = document.getElementById('login-error');
 
+            // Login gate disabled: page opens directly without requiring sign-in.
+            if (gate) gate.remove();
+            return;
+
             if (sessionStorage.getItem('authed') === 'true') {
-                if (gate) gate.remove();
+                gate.remove();
                 return;
             }
 
-            if (form) {
-                document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
 
-                form.addEventListener('submit', async function (e) {
-                    e.preventDefault();
-                    if (errorMsg) errorMsg.classList.add('hidden');
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                errorMsg.classList.add('hidden');
 
-                    const usernameEl = document.getElementById('login-username');
-                    const passwordEl = document.getElementById('login-password');
-                    const username = usernameEl ? usernameEl.value.trim() : '';
-                    const password = passwordEl ? passwordEl.value : '';
+                const username = document.getElementById('login-username').value.trim();
+                const password = document.getElementById('login-password').value;
 
-                    let data;
-                    try {
-                        const res = await fetch('users.json', { cache: 'no-store' });
-                        data = await res.json();
-                    } catch (err) {
-                        if (errorMsg) {
-                            errorMsg.textContent = 'تعذر التحقق من البيانات، حاول مرة أخرى';
-                            errorMsg.classList.remove('hidden');
-                        }
-                        return;
-                    }
+                let data;
+                try {
+                    const res = await fetch('users.json', { cache: 'no-store' });
+                    data = await res.json();
+                } catch (err) {
+                    errorMsg.textContent = 'تعذر التحقق من البيانات، حاول مرة أخرى';
+                    errorMsg.classList.remove('hidden');
+                    return;
+                }
 
-                    const match = (data.users || []).some(
-                        u => u.username === username && u.password === password
-                    );
+                const match = (data.users || []).some(
+                    u => u.username === username && u.password === password
+                );
 
-                    if (match) {
-                        sessionStorage.setItem('authed', 'true');
-                        document.body.style.overflow = '';
-                        if (gate) gate.remove();
-                    } else {
-                        if (errorMsg) {
-                            errorMsg.textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة';
-                            errorMsg.classList.remove('hidden');
-                        }
-                    }
-                });
-            }
+                if (match) {
+                    sessionStorage.setItem('authed', 'true');
+                    document.body.style.overflow = '';
+                    gate.remove();
+                } else {
+                    errorMsg.textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة';
+                    errorMsg.classList.remove('hidden');
+                }
+            });
         })();
     </script>
 
