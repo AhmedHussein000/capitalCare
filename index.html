@@ -117,7 +117,8 @@
             box-shadow: 0 16px 28px rgba(13, 92, 86, 0.12);
         }
 
-        #vitamins-section .medicine-image-slot {
+        #vitamins-section .medicine-image-slot,
+        #ursofalk-section .medicine-image-slot {
             min-height: 130px;
             border: 1px dashed #99d8d0;
             border-radius: 1rem;
@@ -129,7 +130,8 @@
             margin-bottom: 1rem;
         }
 
-        #vitamins-section .medicine-image-slot img {
+        #vitamins-section .medicine-image-slot img,
+        #ursofalk-section .medicine-image-slot img {
             max-height: 120px;
             max-width: 100%;
             object-fit: contain;
@@ -151,6 +153,11 @@
             max-width: 100%;
             max-height: 96px;
             object-fit: contain;
+        }
+
+        /* Portfolio hero: hidden by default, only shown by the theme-v6 override below. */
+        .portfolio-hero {
+            display: none;
         }
 
         #practical-start-section {
@@ -589,12 +596,10 @@
         @keyframes v2-page-enter {
             from {
                 opacity: 0;
-                filter: blur(3px);
             }
 
             to {
                 opacity: 1;
-                filter: blur(0);
             }
         }
 
@@ -739,6 +744,135 @@
             .theme-v2 #cta-section>div>div {
                 padding: 0.75rem;
             }
+        }
+
+        /* Theme 02 coverage fixes: utility classes and detail-page components the base rules above missed. */
+        .theme-v2 .bg-slate-100 {
+            background-color: #eef2f8;
+        }
+
+        .theme-v2 .text-slate-700 {
+            color: #3c4a5c;
+        }
+
+        .theme-v2 .text-slate-400,
+        .theme-v2 .text-slate-100 {
+            color: #8a97ac;
+        }
+
+        .theme-v2 .border-slate-50 {
+            border-color: #f0f4fa;
+        }
+
+        .theme-v2 .border-slate-100,
+        .theme-v2 .border-slate-200 {
+            border-color: #dbe6f5;
+        }
+
+        .theme-v2 .border-slate-800 {
+            border-color: #24406b;
+        }
+
+        .theme-v2 .bg-teal-100 {
+            background-color: #d7e6ff;
+        }
+
+        .theme-v2 .text-teal-900 {
+            color: #0d2a5c;
+        }
+
+        .theme-v2 .bg-teal-50\/50 {
+            background-color: rgba(234, 242, 255, 0.6);
+        }
+
+        .theme-v2 .bg-amber-100 {
+            background-color: #ffe0d9;
+        }
+
+        .theme-v2 .text-amber-100 {
+            color: #ffe4de;
+        }
+
+        .theme-v2 .text-amber-800 {
+            color: #7a2a22;
+        }
+
+        .theme-v2 .border-amber-400 {
+            border-color: #f7a89c;
+        }
+
+        .theme-v2 .bg-red-50,
+        .theme-v2 .bg-red-100 {
+            background-color: #fdeceb;
+        }
+
+        .theme-v2 .text-red-500,
+        .theme-v2 .text-red-600,
+        .theme-v2 .text-red-700 {
+            color: #d94f45;
+        }
+
+        .theme-v2 .text-emerald-100 {
+            color: #d7f3ea;
+        }
+
+        .theme-v2 .border-emerald-300 {
+            border-color: #9fe0cd;
+        }
+
+        .theme-v2 .text-sky-100 {
+            color: #dcecff;
+        }
+
+        .theme-v2 .border-teal-300 {
+            border-color: #a9c5f7;
+        }
+
+        .theme-v2 .border-teal-400 {
+            border-color: #8fb3f2;
+        }
+
+        .theme-v2 .border-teal-600,
+        .theme-v2 .ring-teal-600 {
+            border-color: #2458b8;
+            --tw-ring-color: #2458b8;
+        }
+
+        .theme-v2 .from-amber-500 {
+            --tw-gradient-from: #f26b5e var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(242 107 94 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v2 .to-orange-600 {
+            --tw-gradient-to: #b43a2f var(--tw-gradient-to-position);
+        }
+
+        .theme-v2 #practical-start-section .start-guide {
+            border-color: #c9dcff;
+            box-shadow: 0 14px 35px rgba(23, 63, 138, 0.08);
+        }
+
+        .theme-v2 #practical-start-section .start-alert {
+            background: #eaf2ff;
+            border-right-color: #2458b8;
+        }
+
+        .theme-v2 #practical-start-section .start-question {
+            background: #ffffff;
+            border-color: #c9dcff;
+        }
+
+        .theme-v2 #vitamins-section .medicine-image-slot,
+        .theme-v2 #ursofalk-section .medicine-image-slot {
+            background: #eaf2ff;
+            border-color: #c9dcff;
+            color: #2458b8;
+        }
+
+        .theme-v2 .card-image-slot {
+            background: rgba(234, 242, 255, 0.72);
+            border-color: #c9dcff;
+            color: #2458b8;
         }
 
         /* Theme 03: Editorial wellness with ink, lime, and coral accents. */
@@ -1142,6 +1276,146 @@
             border-color: #123b5d;
         }
 
+        /* Theme 03 coverage fixes: utility classes and detail-page components the base + refinement rules above missed. */
+        .theme-v3 .bg-slate-100 {
+            background-color: #eef0e2;
+        }
+
+        .theme-v3 .text-slate-700 {
+            color: #3a4650;
+        }
+
+        .theme-v3 .text-slate-400,
+        .theme-v3 .text-slate-100 {
+            color: #8b9399;
+        }
+
+        .theme-v3 .border-slate-50 {
+            border-color: #eef0e2;
+        }
+
+        .theme-v3 .border-slate-800 {
+            border-color: #2a3540;
+        }
+
+        .theme-v3 .bg-teal-100 {
+            background-color: #d6ecf5;
+        }
+
+        .theme-v3 .text-teal-900 {
+            color: #0d2f22;
+        }
+
+        .theme-v3 .bg-teal-50\/50 {
+            background-color: rgba(227, 243, 250, 0.6);
+        }
+
+        .theme-v3 .bg-amber-100 {
+            background-color: #d6ecf5;
+        }
+
+        .theme-v3 .text-amber-100 {
+            color: #e6f4fa;
+        }
+
+        .theme-v3 .text-amber-800 {
+            color: #123b5d;
+        }
+
+        .theme-v3 .border-amber-400 {
+            border-color: #a9d8ea;
+        }
+
+        .theme-v3 .bg-red-50,
+        .theme-v3 .bg-red-100 {
+            background-color: #d6ecf5;
+        }
+
+        .theme-v3 .text-red-600 {
+            color: #16805f;
+        }
+
+        .theme-v3 .text-emerald-100 {
+            color: #d7f0e4;
+        }
+
+        .theme-v3 .border-emerald-300 {
+            border-color: #a8e0c8;
+        }
+
+        .theme-v3 .text-sky-100 {
+            color: #d9eef0;
+        }
+
+        .theme-v3 .border-teal-300 {
+            border-color: #8fd9bc;
+        }
+
+        .theme-v3 .border-teal-400 {
+            border-color: #6bcaa4;
+        }
+
+        .theme-v3 .border-teal-600,
+        .theme-v3 .ring-teal-600 {
+            border-color: #20b486;
+            --tw-ring-color: #20b486;
+        }
+
+        .theme-v3 .from-teal-600 {
+            --tw-gradient-from: #20b486 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(32 180 134 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v3 .to-teal-800 {
+            --tw-gradient-to: #123b5d var(--tw-gradient-to-position);
+        }
+
+        .theme-v3 .from-emerald-600 {
+            --tw-gradient-from: #123b5d var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(18 59 93 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v3 .to-teal-700 {
+            --tw-gradient-to: #20b486 var(--tw-gradient-to-position);
+        }
+
+        .theme-v3 .from-sky-600 {
+            --tw-gradient-from: #20b486 var(--tw-gradient-from-position);
+            --tw-gradient-to: rgb(32 180 134 / 0) var(--tw-gradient-to-position);
+        }
+
+        .theme-v3 .to-blue-700 {
+            --tw-gradient-to: #123b5d var(--tw-gradient-to-position);
+        }
+
+        .theme-v3 #practical-start-section .start-guide {
+            border-color: #d9ded3;
+            box-shadow: 0 14px 35px rgba(18, 24, 32, 0.08);
+        }
+
+        .theme-v3 #practical-start-section .start-alert {
+            background: #e3f3fa;
+            border-right-color: #20b486;
+        }
+
+        .theme-v3 #practical-start-section .start-question {
+            background: #ffffff;
+            border-color: #d9ded3;
+        }
+
+        .theme-v3 #vitamins-section .medicine-image-slot,
+        .theme-v3 #ursofalk-section .medicine-image-slot {
+            background: #e3f3fa;
+            border-color: #d9ded3;
+            color: #123b5d;
+        }
+
+        .theme-v3 .card-image-slot {
+            background: rgba(227, 243, 250, 0.72);
+            border-color: #d9ded3;
+            color: #123b5d;
+        }
+
         /* Theme 04: Midnight Clinical — dark glass UI with cyan/violet glow accents. */
         body.theme-v4 {
             background-color: #0a1120;
@@ -1466,12 +1740,10 @@
         @keyframes v4-page-enter {
             from {
                 opacity: 0;
-                transform: translateY(8px);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
 
@@ -1512,6 +1784,48 @@
         .theme-v4 #navigation-cards-section:not(.hidden),
         .theme-v4 #navigation-cards-section.nav-enter {
             animation-name: v4-nav-enter;
+        }
+
+        /* Theme 04 coverage fixes: utility classes and detail-page components the base rules above missed. */
+        .theme-v4 .text-teal-900 {
+            color: #67e8f9;
+        }
+
+        .theme-v4 .bg-teal-50\/50 {
+            background-color: rgba(34, 211, 238, 0.05);
+        }
+
+        .theme-v4 .bg-amber-100 {
+            background-color: rgba(251, 191, 36, 0.16);
+        }
+
+        .theme-v4 #practical-start-section .start-guide {
+            border-color: rgba(148, 190, 210, 0.16);
+            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+            background-color: #101a2c;
+        }
+
+        .theme-v4 #practical-start-section .start-alert {
+            background: rgba(34, 211, 238, 0.08);
+            border-right-color: #22d3ee;
+        }
+
+        .theme-v4 #practical-start-section .start-question {
+            background: #101a2c;
+            border-color: rgba(148, 190, 210, 0.16);
+        }
+
+        .theme-v4 #vitamins-section .medicine-image-slot,
+        .theme-v4 #ursofalk-section .medicine-image-slot {
+            background: rgba(34, 211, 238, 0.08);
+            border-color: rgba(34, 211, 238, 0.3);
+            color: #67e8f9;
+        }
+
+        .theme-v4 .card-image-slot {
+            background: rgba(34, 211, 238, 0.06);
+            border-color: rgba(148, 190, 210, 0.25);
+            color: #67e8f9;
         }
 
         /* Theme 05: Warm Apothecary — cream, forest green, and terracotta boutique-wellness direction. */
@@ -1828,12 +2142,10 @@
         @keyframes v5-page-enter {
             from {
                 opacity: 0;
-                transform: translateY(10px);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
             }
         }
 
@@ -1872,6 +2184,488 @@
         .theme-v5 #navigation-cards-section:not(.hidden),
         .theme-v5 #navigation-cards-section.nav-enter {
             animation-name: v5-nav-enter;
+        }
+
+        /* Theme 05 coverage fixes: utility classes and detail-page components the base rules above missed. */
+        .theme-v5 .text-teal-900 {
+            color: #123b2c;
+        }
+
+        .theme-v5 .bg-teal-50\/50 {
+            background-color: rgba(234, 243, 236, 0.6);
+        }
+
+        .theme-v5 .bg-amber-100 {
+            background-color: #f5ddc9;
+        }
+
+        .theme-v5 #practical-start-section .start-guide {
+            border-color: #ecdfc9;
+            box-shadow: 0 14px 35px rgba(80, 62, 34, 0.08);
+        }
+
+        .theme-v5 #practical-start-section .start-alert {
+            background: #eef4ea;
+            border-right-color: #1f5f4a;
+        }
+
+        .theme-v5 #practical-start-section .start-question {
+            background: #fffdf8;
+            border-color: #ecdfc9;
+        }
+
+        .theme-v5 #vitamins-section .medicine-image-slot,
+        .theme-v5 #ursofalk-section .medicine-image-slot {
+            background: #f2ece0;
+            border-color: #ecdfc9;
+            color: #1f5f4a;
+        }
+
+        .theme-v5 .card-image-slot {
+            background: rgba(255, 253, 248, 0.72);
+            border-color: #ecdfc9;
+            color: #1f5f4a;
+        }
+
+        /* Theme 06: Personal Portfolio — charcoal and brushed-gold personal-brand direction. */
+        body.theme-v6 {
+            background-color: #f7f6f3;
+            color: #1c1c1c;
+        }
+
+        .theme-v6 .bg-slate-50 {
+            background-color: #f7f6f3;
+        }
+
+        .theme-v6 .bg-white {
+            background-color: #ffffff;
+        }
+
+        .theme-v6 .bg-slate-100 {
+            background-color: #efece4;
+        }
+
+        .theme-v6 .text-slate-800 {
+            color: #1c1c1c;
+        }
+
+        .theme-v6 .text-slate-700 {
+            color: #33312c;
+        }
+
+        .theme-v6 .text-slate-600 {
+            color: #5c5850;
+        }
+
+        .theme-v6 .text-slate-500,
+        .theme-v6 .text-slate-400 {
+            color: #8a8578;
+        }
+
+        .theme-v6 .text-slate-100 {
+            color: #f4ede0;
+        }
+
+        .theme-v6 .border-slate-50,
+        .theme-v6 .border-slate-100,
+        .theme-v6 .border-slate-200 {
+            border-color: #e7e1d3;
+        }
+
+        .theme-v6 .bg-slate-900 {
+            background-color: #14181f;
+        }
+
+        .theme-v6 .border-slate-800 {
+            border-color: #33312c;
+        }
+
+        .theme-v6 .bg-teal-700,
+        .theme-v6 .bg-teal-900 {
+            background-color: #14181f;
+        }
+
+        .theme-v6 .bg-teal-600 {
+            background-color: #c9a15a;
+        }
+
+        .theme-v6 .bg-teal-500 {
+            background-color: #d4af6a;
+        }
+
+        .theme-v6 .bg-teal-50,
+        .theme-v6 .bg-teal-100 {
+            background-color: #f4ede0;
+        }
+
+        .theme-v6 .text-teal-800,
+        .theme-v6 .text-teal-700,
+        .theme-v6 .text-teal-600 {
+            color: #a67f3d;
+        }
+
+        .theme-v6 .text-teal-900 {
+            color: #5c4523;
+        }
+
+        .theme-v6 .text-teal-500,
+        .theme-v6 .text-teal-400,
+        .theme-v6 .text-teal-300,
+        .theme-v6 .text-teal-200,
+        .theme-v6 .text-teal-100 {
+            color: #ecdcb8;
+        }
+
+        .theme-v6 .border-teal-100,
+        .theme-v6 .border-teal-200 {
+            border-color: #e9d9b8;
+        }
+
+        .theme-v6 .border-teal-300 {
+            border-color: #ddc190;
+        }
+
+        .theme-v6 .border-teal-400 {
+            border-color: #cfa968;
+        }
+
+        .theme-v6 .border-teal-600,
+        .theme-v6 .ring-teal-600 {
+            border-color: #c9a15a;
+            --tw-ring-color: #c9a15a;
+        }
+
+        .theme-v6 .bg-emerald-600 {
+            background-color: #33312c;
+        }
+
+        .theme-v6 .bg-emerald-700 {
+            background-color: #1c1c1c;
+        }
+
+        .theme-v6 .bg-emerald-50 {
+            background-color: #efece4;
+        }
+
+        .theme-v6 .text-emerald-800,
+        .theme-v6 .text-emerald-600 {
+            color: #33312c;
+        }
+
+        .theme-v6 .text-emerald-100 {
+            color: #f4ede0;
+        }
+
+        .theme-v6 .border-emerald-300 {
+            border-color: #ddc190;
+        }
+
+        .theme-v6 .bg-sky-50 {
+            background-color: #efece4;
+        }
+
+        .theme-v6 .text-sky-600 {
+            color: #6b5a3a;
+        }
+
+        .theme-v6 .text-sky-100 {
+            color: #f4ede0;
+        }
+
+        .theme-v6 .bg-amber-50,
+        .theme-v6 .bg-amber-100 {
+            background-color: #f7ebe0;
+        }
+
+        .theme-v6 .bg-amber-500 {
+            background-color: #b3503c;
+        }
+
+        .theme-v6 .text-amber-600,
+        .theme-v6 .text-amber-700 {
+            color: #a8503a;
+        }
+
+        .theme-v6 .text-amber-100,
+        .theme-v6 .text-amber-800 {
+            color: #7c3e2c;
+        }
+
+        .theme-v6 .border-amber-200,
+        .theme-v6 .border-amber-400 {
+            border-color: #ecc3b0;
+        }
+
+        .theme-v6 .bg-red-50,
+        .theme-v6 .bg-red-100 {
+            background-color: #f7e6e0;
+        }
+
+        .theme-v6 .text-red-500,
+        .theme-v6 .text-red-600,
+        .theme-v6 .text-red-700 {
+            color: #a8503a;
+        }
+
+        .theme-v6 .bg-teal-50\/50 {
+            background-color: rgba(244, 237, 224, 0.6);
+        }
+
+        .theme-v6 header {
+            background-color: #f7f6f3;
+            border-bottom: 1px solid #e7e1d3;
+            box-shadow: none;
+        }
+
+        .theme-v6 header .bg-teal-700 {
+            background: linear-gradient(135deg, #14181f, #c9a15a);
+        }
+
+        .theme-v6 #navigation-cards-section {
+            background-color: #f7f6f3;
+            border-color: #e7e1d3;
+            box-shadow: none;
+        }
+
+        .theme-v6 #cta-section {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            background: #14181f;
+        }
+
+        .theme-v6 #cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.5;
+            background-image: radial-gradient(circle, rgba(201, 161, 90, 0.25) 1.5px, transparent 1.5px);
+            background-size: 26px 26px;
+        }
+
+        .theme-v6 #cta-section>div>span {
+            color: #ecdcb8;
+            background: rgba(201, 161, 90, 0.14);
+            border: 1px solid rgba(201, 161, 90, 0.3);
+        }
+
+        .theme-v6 #cta-section>div>p:first-of-type,
+        .theme-v6 #cta-section>div>p:last-child {
+            color: #cfc4ac;
+        }
+
+        .theme-v6 #cta-section>div>div a:last-child {
+            background: #c9a15a;
+            border-color: #c9a15a;
+            color: #14181f;
+        }
+
+        .theme-v6 #practical-start-section .start-guide {
+            border-color: #e7e1d3;
+            box-shadow: 0 14px 35px rgba(20, 24, 31, 0.08);
+        }
+
+        .theme-v6 #practical-start-section .start-alert {
+            background: #f4ede0;
+            border-right-color: #c9a15a;
+        }
+
+        .theme-v6 #practical-start-section .start-question {
+            background: #ffffff;
+            border-color: #e7e1d3;
+        }
+
+        .theme-v6 #vitamins-section .medicine-image-slot,
+        .theme-v6 #ursofalk-section .medicine-image-slot {
+            background: #f4ede0;
+            border-color: #e9d9b8;
+            color: #a67f3d;
+        }
+
+        .theme-v6 .card-image-slot {
+            background: rgba(244, 237, 224, 0.72);
+            border-color: #e9d9b8;
+            color: #a67f3d;
+        }
+
+        /* Portfolio home layout: swap the 5-card grid for a personal hero introducing د. أحمد المصري */
+        .theme-v6 .home-hero-section {
+            background: linear-gradient(180deg, #f7f6f3 0%, #f7f6f3 100%);
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        .theme-v6 .home-hero-section::before {
+            opacity: 0.5;
+            background-image: radial-gradient(circle, rgba(201, 161, 90, 0.18) 1.5px, transparent 1.5px);
+            background-size: 28px 28px;
+        }
+
+        .theme-v6 #home-content>.text-center,
+        .theme-v6 #home-content>.grid {
+            display: none;
+        }
+
+        .theme-v6 .portfolio-hero {
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr;
+            gap: 3rem;
+            align-items: center;
+            text-align: right;
+        }
+
+        .theme-v6 .portfolio-photo-slot {
+            aspect-ratio: 1;
+            border-radius: 999px;
+            border: 2px solid #e9d9b8;
+            background: linear-gradient(160deg, #f4ede0, #ffffff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #c9a15a;
+            box-shadow: 0 24px 50px rgba(20, 24, 31, 0.12);
+        }
+
+        .theme-v6 .portfolio-eyebrow {
+            display: inline-block;
+            color: #a67f3d;
+            background: #f4ede0;
+            border: 1px solid #e9d9b8;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.35rem 1rem;
+            border-radius: 999px;
+            margin-bottom: 0.75rem;
+        }
+
+        .theme-v6 .portfolio-intro h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            color: #1c1c1c;
+            line-height: 1.2;
+        }
+
+        .theme-v6 .portfolio-role {
+            color: #a67f3d;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        .theme-v6 .portfolio-bio {
+            color: #5c5850;
+            margin-top: 1rem;
+            max-width: 40rem;
+            line-height: 1.9;
+        }
+
+        .theme-v6 .portfolio-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            justify-content: flex-end;
+        }
+
+        .theme-v6 .portfolio-stats div {
+            text-align: center;
+        }
+
+        .theme-v6 .portfolio-stats strong {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #14181f;
+        }
+
+        .theme-v6 .portfolio-stats span {
+            font-size: 0.75rem;
+            color: #8a8578;
+        }
+
+        .theme-v6 .portfolio-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+            justify-content: flex-end;
+        }
+
+        .theme-v6 .portfolio-links button,
+        .theme-v6 .portfolio-links a {
+            font-size: 0.85rem;
+            font-weight: 700;
+            padding: 0.65rem 1.25rem;
+            border-radius: 999px;
+            border: 1px solid #e9d9b8;
+            background: #ffffff;
+            color: #33312c;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .theme-v6 .portfolio-links button:hover {
+            border-color: #c9a15a;
+            color: #a67f3d;
+        }
+
+        .theme-v6 .portfolio-links a {
+            background: #14181f;
+            border-color: #14181f;
+            color: #f4ede0;
+        }
+
+        .theme-v6 .portfolio-links a:hover {
+            background: #c9a15a;
+            border-color: #c9a15a;
+            color: #14181f;
+        }
+
+        @keyframes v6-page-enter {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes v6-photo-enter {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .theme-v6 {
+            animation: v6-page-enter 0.6s ease-out both;
+        }
+
+        .theme-v6 .portfolio-photo-slot {
+            animation: v6-photo-enter 0.7s ease-out both;
+        }
+
+        @media (max-width: 767px) {
+            .theme-v6 .portfolio-hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .theme-v6 .portfolio-stats,
+            .theme-v6 .portfolio-links {
+                justify-content: center;
+            }
+
+            .theme-v6 .portfolio-photo-slot {
+                max-width: 220px;
+                margin: 0 auto;
+            }
         }
 
         /* Theme switcher floating control */
@@ -2220,6 +3014,32 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- Portfolio hero: only shown when the "بورتفوليو شخصي" theme is active, replacing the card grid above -->
+        <div class="portfolio-hero">
+            <div class="portfolio-photo-slot">
+                <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+            </div>
+            <div class="portfolio-intro">
+                <span class="portfolio-eyebrow">صيدليات Capital Care</span>
+                <h1>د. أحمد المصري</h1>
+                <p class="portfolio-role">مسؤول الدعم الصيدلي لمرضى ما بعد عمليات السمنة</p>
+                <p class="portfolio-bio">هوريك خطوة بخطوة كل الأدوية والفيتامينات اللي محتاجها بعد العملية، بجرعاتها
+                    ومواعيدها بالظبط، عشان تعدي مرحلة التعافي بأمان وراحة بال.</p>
+                <div class="portfolio-stats">
+                    <div><strong>100%</strong><span>منتجات أصلية</span></div>
+                    <div><strong>24/7</strong><span>دعم واستشارة</span></div>
+                </div>
+                <div class="portfolio-links">
+                    <button type="button" onclick="switchTab('prescription-practical')">الروشتة العملية</button>
+                    <button type="button" onclick="switchTab('prescription-followup')">روشتة المتابعة</button>
+                    <button type="button" onclick="switchTab('services')">خدماتنا</button>
+                    <button type="button" onclick="switchTab('faq')">الأسئلة الشائعة</button>
+                    <a href="https://wa.me/201222750363?text=متواجدون  دائما لدعمك في رحلة التعافي " target="_blank">قيم
+                        تجربتك</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -3188,7 +4008,7 @@
             class="hidden w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transition-all duration-300 transform scale-95 opacity-0 mb-1">
             <div class="px-4 py-3 border-b border-slate-100 text-right">
                 <span class="block text-sm font-bold text-slate-800">اختر شكل الموقع</span>
-                <span class="block text-[11px] text-slate-500 mt-0.5">5 تصميمات جاهزة للاختيار بينها</span>
+                <span class="block text-[11px] text-slate-500 mt-0.5">6 تصميمات جاهزة للاختيار بينها</span>
             </div>
             <div id="theme-switcher-options" class="p-2.5 space-y-1.5"></div>
         </div>
@@ -3206,6 +4026,7 @@
             { id: 'theme-v3', name: 'تحريري جريء', desc: 'ألوان جريئة وظلال بارزة', color: '#20b486' },
             { id: 'theme-v4', name: 'الوضع الليلي', desc: 'داكن أنيق بلمسة نيون سماوي', color: '#22d3ee' },
             { id: 'theme-v5', name: 'دافئ صيدلاني', desc: 'كريمي دافئ بلمسة أخضر وطوبي', color: '#1f5f4a' },
+            { id: 'theme-v6', name: 'بورتفوليو شخصي', desc: 'هوية شخصية أنيقة بالأسود والذهبي', color: '#c9a15a' },
         ];
 
         function applySiteTheme(themeId, persist) {
